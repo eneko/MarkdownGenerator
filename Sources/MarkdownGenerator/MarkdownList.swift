@@ -49,15 +49,17 @@ public struct MarkdownList: MarkdownConvertible {
         let symbol = style == .ordered ? "1.  " : "-   "
         var lines = item.markdown.components(separatedBy: String.newLine)
         let first = lines.removeFirst()
+        let firstLine = item is MarkdownList ? "    \(first)" : "\(symbol)\(first)"
 
         if lines.isEmpty {
-            return "\(symbol)\(first)"
+            return firstLine
         }
 
-        let indentedLines = lines.map { $0.isEmpty ? "" : "    \($0)" }
+        let blankLine = item is MarkdownList ? "" : String.newLine
+        let indentedLines = lines.map { $0.isEmpty ? "" : "    \($0)" }.joined(separator: String.newLine) + blankLine
         return """
-        \(symbol)\(first)
-        \(indentedLines.joined(separator: String.newLine))
+        \(firstLine)
+        \(indentedLines)
         """
     }
 
