@@ -19,15 +19,11 @@ Run `sourcedocs` in the repository root to update this documentation.
 - [MarkdownConvertible](/Docs/Reference/MarkdownGenerator/extensions/MarkdownConvertible.md)
 - [String](/Docs/Reference/MarkdownGenerator/extensions/String.md)
 
+## Enums
 
+- [MarkdownListStyle](/Docs/Reference/MarkdownGenerator/enums/MarkdownListStyle.md)
 
 ## Protocols
 
 - [MarkdownConvertible](/Docs/Reference/MarkdownGenerator/protocols/MarkdownConvertible.md)
 
-
-| Header | Another |
-| ------ | ------- |
-| Text that should wrap in multiple lines. | - *List* item |
-| Text with inline `backticks` | - **Second** list item |
-| ![image](http://enekoalonso.com/media/sourcedocs-header.jpg) | [Google](google.com) |

@@ -1,6 +1,14 @@
 **STRUCT**
 # `MarkdownImage`
 
+**Contents**
+- [Properties](#properties)
+  - `url`
+  - `altText`
+  - `markdown`
+- [Methods](#methods)
+  - `init(url:altText:)`
+
 **Declaration**
 ```swift
 public struct MarkdownImage: MarkdownConvertible
@@ -11,7 +19,13 @@ public struct MarkdownImage: MarkdownConvertible
 MarkdownImage.Type
 ```
 
+Render an HTML image in Markdown format
 
+    MarkdownImage(url: "http://www.enekoalonso.com/media/sourcedocs-header.jpg", altText: "SourceDocs Header").markdown
+
+Would render as:
+
+    ![SourceDocs Header](http://www.enekoalonso.com/media/sourcedocs-header.jpg)
 
 --------------------
 
@@ -28,13 +42,13 @@ public let url: String
 String
 ```
 
+URL where the image is located. Can be absolute or relative.
 
-
-### `alternateText`
+### `altText`
 
 **Declaration**
 ```swift
-public let alternateText: String
+public let altText: String
 ```
 
 **Infered Type**
@@ -42,7 +56,7 @@ public let alternateText: String
 String
 ```
 
-
+Alternate text to display on non-graphic browsers or to be used by screen readers.
 
 ### `markdown`
 
@@ -56,5 +70,31 @@ public var markdown: String
 String
 ```
 
+Generated Markdown output
 
+--------------------
 
+## Methods
+### `init(url:altText:)`
+
+**Declaration**
+```swift
+public init(url: String, altText: String = "")
+```
+
+**Infered Type**
+```swift
+(MarkdownImage.Type) -> (String, String) -> MarkdownImage
+```
+
+MarkdownImage initializer
+
+- Parameters:
+  - url: URL where the image is located. Can be absolute or relative.
+  - altText: Alternate text to display on non-graphic browsers or to be used by screen readers.
+
+#### Parameters
+| Name | Description |
+| ---- | ----------- |
+| `url` | URL where the image is located. Can be absolute or relative. |
+| `altText` | Alternate text to display on non-graphic browsers or to be used by screen readers. |

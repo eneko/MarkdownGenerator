@@ -108,7 +108,12 @@ public struct MarkdownHeader: MarkdownConvertible {
 ///       ###### H6 Header
 ///
 public enum MarkdownHeaderLevel: Int {
-    case h1 = 1, h2, h3, h4, h5, h6
+    case h1 = 1
+    case h2
+    case h3
+    case h4
+    case h5
+    case h6
 }
 
 /// Markdown Header render style
@@ -116,21 +121,22 @@ public enum MarkdownHeaderLevel: Int {
 /// - `setex`: Setext-style headers are “underlined” using equal signs (for first-level headers)
 ///          and dashes (for second-level headers). For example:
 ///
-///              This is a Setex H1 Header
-///              =========================
+///        This is a Setex H1 Header
+///        =========================
 ///
-///              This is a Setex H2 Header
-///              -------------------------
+///        This is a Setex H2 Header
+///        -------------------------
 ///
 /// - `atx`: Atx-style headers use 1-6 hash characters at the start of the line, corresponding
 ///        to header levels 1-6. For example:
 ///
-///            # This is an Atx H1 Header
+///        # This is an Atx H1 Header
 ///
-///            ## This is an Atx H2 Header
+///        ## This is an Atx H2 Header
 ///
-///            ###### This is a closed Atx H6 Header ######
+///        ###### This is a closed Atx H6 Header ######
 ///
 public enum MarkdownHeaderStyle {
-    case setex, atx
+    case setex
+    case atx
 }

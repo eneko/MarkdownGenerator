@@ -7,11 +7,34 @@
 
 import Foundation
 
+/// Render an HTML link in Markdown format
+///
+///     MarkdownLink(text: "Google", url: "https://www.google.com").markdown
+///
+/// Would render as:
+///
+///     [Google](https://www.google.com)
+///
 public struct MarkdownLink: MarkdownConvertible {
-    public let title: String
+
+    /// Text to display as hyper-linked.
+    public let text: String
+
+    /// Link URL, can be absolute, relative, or #local.
     public let url: String
 
+    /// MarkdownLink initializer
+    ///
+    /// - Parameters:
+    ///   - text: Text to display as hyper-linked.
+    ///   - url: Link URL, can be absolute, relative, or #local.
+    public init(text: String, url: String) {
+        self.text = text
+        self.url = url
+    }
+
+    /// Generated Markdown output
     public var markdown: String {
-        return "[\(title)](\(url))"
+        return "[\(text)](\(url))"
     }
 }

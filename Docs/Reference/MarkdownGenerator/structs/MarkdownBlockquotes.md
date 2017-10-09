@@ -1,6 +1,12 @@
 **STRUCT**
 # `MarkdownBlockquotes`
 
+**Contents**
+- [Properties](#properties)
+  - `markdown`
+- [Methods](#methods)
+  - `init(content:)`
+
 **Declaration**
 ```swift
 public struct MarkdownBlockquotes: MarkdownConvertible
@@ -11,7 +17,7 @@ public struct MarkdownBlockquotes: MarkdownConvertible
 MarkdownBlockquotes.Type
 ```
 
-Blockquotes
+Render Markdown Blockquotes
 
 Markdown uses email-style > characters for blockquoting.
 
@@ -25,20 +31,6 @@ Markdown uses email-style > characters for blockquoting.
 --------------------
 
 ## Properties
-### `content`
-
-**Declaration**
-```swift
-public let content: MarkdownConvertible
-```
-
-**Infered Type**
-```swift
-MarkdownConvertible
-```
-
-
-
 ### `markdown`
 
 **Declaration**
@@ -51,5 +43,28 @@ public var markdown: String
 String
 ```
 
+Generated Markdown output
 
+--------------------
 
+## Methods
+### `init(content:)`
+
+**Declaration**
+```swift
+public init(content: MarkdownConvertible)
+```
+
+**Infered Type**
+```swift
+(MarkdownBlockquotes.Type) -> (MarkdownConvertible) -> MarkdownBlockquotes
+```
+
+MarkdownBlockquotes initializer
+
+- Parameter content: Content to be block-quoted with '> '
+
+#### Parameters
+| Name | Description |
+| ---- | ----------- |
+| `content` | Content to be block-quoted with ’> ’ |

@@ -1,6 +1,14 @@
 **STRUCT**
 # `MarkdownLink`
 
+**Contents**
+- [Properties](#properties)
+  - `text`
+  - `url`
+  - `markdown`
+- [Methods](#methods)
+  - `init(text:url:)`
+
 **Declaration**
 ```swift
 public struct MarkdownLink: MarkdownConvertible
@@ -11,16 +19,22 @@ public struct MarkdownLink: MarkdownConvertible
 MarkdownLink.Type
 ```
 
+Render an HTML link in Markdown format
 
+    MarkdownLink(text: "Google", url: "https://www.google.com").markdown
+
+Would render as:
+
+    [Google](https://www.google.com)
 
 --------------------
 
 ## Properties
-### `title`
+### `text`
 
 **Declaration**
 ```swift
-public let title: String
+public let text: String
 ```
 
 **Infered Type**
@@ -28,7 +42,7 @@ public let title: String
 String
 ```
 
-
+Text to display as hyper-linked.
 
 ### `url`
 
@@ -42,7 +56,7 @@ public let url: String
 String
 ```
 
-
+Link URL, can be absolute, relative, or #local.
 
 ### `markdown`
 
@@ -56,5 +70,31 @@ public var markdown: String
 String
 ```
 
+Generated Markdown output
 
+--------------------
 
+## Methods
+### `init(text:url:)`
+
+**Declaration**
+```swift
+public init(text: String, url: String)
+```
+
+**Infered Type**
+```swift
+(MarkdownLink.Type) -> (String, String) -> MarkdownLink
+```
+
+MarkdownLink initializer
+
+- Parameters:
+  - text: Text to display as hyper-linked.
+  - url: Link URL, can be absolute, relative, or #local.
+
+#### Parameters
+| Name | Description |
+| ---- | ----------- |
+| `text` | Text to display as hyper-linked. |
+| `url` | Link URL, can be absolute, relative, or #local. |

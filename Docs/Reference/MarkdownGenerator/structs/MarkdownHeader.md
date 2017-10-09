@@ -1,6 +1,12 @@
 **STRUCT**
 # `MarkdownHeader`
 
+**Contents**
+- [Properties](#properties)
+  - `markdown`
+- [Methods](#methods)
+  - `init(title:level:style:close:)`
+
 **Declaration**
 ```swift
 public struct MarkdownHeader: MarkdownConvertible
@@ -57,6 +63,8 @@ String
 ```
 
 Generated Markdown output
+
+--------------------
 
 ## Methods
 ### `init(title:level:style:close:)`
