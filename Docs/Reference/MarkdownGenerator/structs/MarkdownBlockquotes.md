@@ -15,9 +15,9 @@ public struct MarkdownBlockquotes: MarkdownConvertible
 
 
 > Render Markdown Blockquotes
-
+>
 > Markdown uses email-style > characters for blockquoting.
-
+>
 > > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
 > > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
 > > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
@@ -53,7 +53,7 @@ public init(content: MarkdownConvertible)
 
 
 > MarkdownBlockquotes initializer
-
+>
 > - Parameter content: Content to be block-quoted with '> '
 
 #### Parameters

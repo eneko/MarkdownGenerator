@@ -17,11 +17,11 @@ public struct MarkdownImage: MarkdownConvertible
 
 
 > Render an HTML image in Markdown format
-
+>
 >     MarkdownImage(url: "http://example.com/image.jpg", altText: "SourceDocs Header").markdown
-
+>
 > Would render as:
-
+>
 >     ![SourceDocs Header](http://example.com/image.jpg)
 
 --------------------
@@ -74,7 +74,7 @@ public init(url: String, altText: String = "")
 
 
 > MarkdownImage initializer
-
+>
 > - Parameters:
 >   - url: URL where the image is located. Can be absolute or relative.
 >   - altText: Alternate text to display on non-graphic browsers or to be used by screen readers.
