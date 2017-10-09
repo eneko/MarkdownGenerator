@@ -21,7 +21,7 @@ extension String: MarkdownConvertible {
 extension Array: MarkdownConvertible {
     /// Render a collection of Markdown convertible elements.
     ///
-    /// Elements are rendered separated by one empty line, to prevent formatting interference.
+    /// Elements are rendered separated by one blank line, to prevent formatting interference.
     public var markdown: String {
         return self.flatMap { ($0 as? MarkdownConvertible)?.markdown }.joined(separator: "\n\n")
     }
