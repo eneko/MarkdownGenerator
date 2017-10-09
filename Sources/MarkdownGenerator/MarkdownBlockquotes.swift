@@ -42,8 +42,12 @@ extension MarkdownConvertible {
     ///     "## H2 Header".blockquoted     // > ## H2 Header
     ///
     public var blockquoted: MarkdownConvertible {
+        let input = markdown
+        if input.isEmpty {
+            return ""
+        }
         let lines = markdown.components(separatedBy: String.newLine)
-        let quoted: [String] = lines.flatMap { $0.isEmpty ? "" : "> \($0)" }
+        let quoted = lines.map { "> \($0)".trimmingCharacters(in: .whitespaces) }
         return quoted.joined(separator: String.newLine)
     }
 }
