@@ -1,20 +1,22 @@
 **ENUM**
 # `MarkdownListStyle`
 
+**Contents**
+- [Cases](#cases)
+  - `ordered`
+  - `unordered`
+
 **Declaration**
 ```swift
 public enum MarkdownListStyle
 ```
 
-**Infered Type**
-```swift
-MarkdownListStyle.Type
-```
 
-Specifies the type of list to be generated
 
-- ordered: Ordered lists use numbers followed by periods.
-- unordered: Unordered lists use hyphens as list markers.
+> Specifies the type of list to be generated
+
+> - ordered: Ordered lists use numbers followed by periods.
+> - unordered: Unordered lists use hyphens as list markers.
 
 --------------------
 
@@ -26,10 +28,7 @@ Specifies the type of list to be generated
 case ordered
 ```
 
-**Infered Type**
-```swift
-(MarkdownListStyle.Type) -> MarkdownListStyle
-```
+
 
 
 
@@ -40,11 +39,11 @@ case ordered
 case unordered
 ```
 
-**Infered Type**
-```swift
-(MarkdownListStyle.Type) -> MarkdownListStyle
-```
 
+
+
+
+--------------------
 
 
 

@@ -13,28 +13,25 @@
 public struct MarkdownList: MarkdownConvertible
 ```
 
-**Infered Type**
-```swift
-MarkdownList.Type
-```
 
-Render a list of elements in Markdown format
 
-Unordered lists:
+> Render a list of elements in Markdown format
 
-    - One item
-    - Another item that expands to multiple
-      lines.
-        - A nested item.
-            - Third-level.
-    - Back to first-level.
+> Unordered lists:
 
-Ordered lists:
+>     - One item
+>     - Another item that expands to multiple
+>       lines.
+>         - A nested item.
+>             - Third-level.
+>     - Back to first-level.
 
-    1. First item
-    1. Second item
-        1. Nested item (second-level)
-    1. Back to first-level
+> Ordered lists:
+
+>     1. First item
+>     1. Second item
+>         1. Nested item (second-level)
+>     1. Back to first-level
 
 --------------------
 
@@ -46,12 +43,9 @@ Ordered lists:
 public var items: [MarkdownConvertible]
 ```
 
-**Infered Type**
-```swift
-[MarkdownConvertible]
-```
 
-List of items to be converted to a list.
+
+> List of items to be converted to a list.
 
 ### `markdown`
 
@@ -60,14 +54,12 @@ List of items to be converted to a list.
 public var markdown: String
 ```
 
-**Infered Type**
-```swift
-String
-```
 
-Generated Markdown output
+
+> Generated Markdown output
 
 --------------------
+
 
 ## Methods
 ### `init(items:style:)`
@@ -77,16 +69,15 @@ Generated Markdown output
 public init(items: [MarkdownConvertible], style: MarkdownListStyle = .unordered)
 ```
 
-**Infered Type**
-```swift
-(MarkdownList.Type) -> ([MarkdownConvertible], MarkdownListStyle) -> MarkdownList
-```
 
-MarkdownList initializer
 
-- Parameter items: List of items to be converted to a list.
+> MarkdownList initializer
+
+> - Parameter items: List of items to be converted to a list.
 
 #### Parameters
 | Name | Description |
 | ---- | ----------- |
-| `items` | List of items to be converted to a list. |
+| items | List of items to be converted to a list. |
+
+--------------------

@@ -6,12 +6,9 @@
 public protocol MarkdownConvertible
 ```
 
-**Infered Type**
-```swift
-MarkdownConvertible.Protocol
-```
 
-Defines an entity that can be represented as Markdown.
+
+> Defines an entity that can be represented as Markdown.
 
 --------------------
 
@@ -23,10 +20,10 @@ Defines an entity that can be represented as Markdown.
 var markdown: String
 ```
 
-**Infered Type**
-```swift
-String
-```
 
-Generated Markdown output representing the current entity.
+
+> Generated Markdown output representing the current entity.
+
+--------------------
+
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Render a two dimmensional Markdown table.
+/// Render a two dimensional Markdown table.
 ///
 ///     |   | Name | Department |
 ///     | - | ---- | ---------- |
@@ -32,7 +32,7 @@ public struct MarkdownTable: MarkdownConvertible {
     ///        the outer array, columns are defined by the inner arrays.
     ///
     ///        An array of rows, each row containing an array of columns. All rows should contain the same
-    ///        number of colums as the headers array, to avoid formatting issues.
+    ///        number of columns as the headers array, to avoid formatting issues.
     public init(headers: [String], data: [[String]]) {
         self.headers = headers.map { $0.isEmpty ? " " : $0 }
         self.data = data

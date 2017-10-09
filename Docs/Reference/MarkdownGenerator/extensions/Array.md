@@ -11,12 +11,12 @@
 public var markdown: String
 ```
 
-**Infered Type**
-```swift
-String
-```
 
-Render a collection of Markdown convertible elements.
 
-Elements are rendered separated by one blank line, to prevent formatting interference.
+> Render a collection of Markdown convertible elements.
+
+> Elements are rendered separated by one blank line, to prevent formatting interference.
+
+--------------------
+
 

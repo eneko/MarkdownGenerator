@@ -12,23 +12,20 @@
 public struct MarkdownTable: MarkdownConvertible
 ```
 
-**Infered Type**
-```swift
-MarkdownTable.Type
-```
 
-Render a two dimmensional Markdown table.
 
-    |   | Name | Department |
-    | - | ---- | ---------- |
-    | 🍏 | Apple | Fruits |
-    | 🍊 | Orange | Fruits |
-    | 🥖 | Bread | Bakery |
+> Render a two dimensional Markdown table.
 
-*Notes*:
-- Markdown tables are not supported by all Markdown readers.
-- Table headers are required.
-- Table cells cannot contain multiple lines. New line characters are replaced by a space.
+>     |   | Name | Department |
+>     | - | ---- | ---------- |
+>     | 🍏 | Apple | Fruits |
+>     | 🍊 | Orange | Fruits |
+>     | 🥖 | Bread | Bakery |
+
+> *Notes*:
+> - Markdown tables are not supported by all Markdown readers.
+> - Table headers are required.
+> - Table cells cannot contain multiple lines. New line characters are replaced by a space.
 
 --------------------
 
@@ -40,14 +37,12 @@ Render a two dimmensional Markdown table.
 public var markdown: String
 ```
 
-**Infered Type**
-```swift
-String
-```
 
-Generated Markdown output
+
+> Generated Markdown output
 
 --------------------
+
 
 ## Methods
 ### `init(headers:data:)`
@@ -57,24 +52,22 @@ Generated Markdown output
 public init(headers: [String], data: [[String]])
 ```
 
-**Infered Type**
-```swift
-(MarkdownTable.Type) -> ([String], [[String]]) -> MarkdownTable
-```
 
-MarkdownTable initializer
 
-- Parameters:
-  - headers: List of table header titles.
-  - data: Two-dimensional `String` array with the table content. Rows are defined by
-       the outer array, columns are defined by the inner arrays.
+> MarkdownTable initializer
 
-       An array of rows, each row containing an array of columns. All rows should contain the same
-       number of colums as the headers array, to avoid formatting issues.
+> - Parameters:
+>   - headers: List of table header titles.
+>   - data: Two-dimensional `String` array with the table content. Rows are defined by
+>        the outer array, columns are defined by the inner arrays.
+
+>        An array of rows, each row containing an array of columns. All rows should contain the same
+>        number of columns as the headers array, to avoid formatting issues.
 
 #### Parameters
 | Name | Description |
 | ---- | ----------- |
-| `headers` | List of table header titles. |
-| `data` | Two-dimensional `String` array with the table content. Rows are defined by the outer array, columns are defined by the inner arrays.
-An array of rows, each row containing an array of columns. All rows should contain the same number of colums as the headers array, to avoid formatting issues. |
+| headers | List of table header titles. |
+| data | Two-dimensional `String` array with the table content. Rows are defined by the outer array, columns are defined by the inner arrays. An array of rows, each row containing an array of columns. All rows should contain the same number of columns as the headers array, to avoid formatting issues. |
+
+--------------------

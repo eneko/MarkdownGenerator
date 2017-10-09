@@ -14,18 +14,15 @@
 public struct MarkdownImage: MarkdownConvertible
 ```
 
-**Infered Type**
-```swift
-MarkdownImage.Type
-```
 
-Render an HTML image in Markdown format
 
-    MarkdownImage(url: "http://example.com/image.jpg", altText: "SourceDocs Header").markdown
+> Render an HTML image in Markdown format
 
-Would render as:
+>     MarkdownImage(url: "http://example.com/image.jpg", altText: "SourceDocs Header").markdown
 
-    ![SourceDocs Header](http://example.com/image.jpg)
+> Would render as:
+
+>     ![SourceDocs Header](http://example.com/image.jpg)
 
 --------------------
 
@@ -37,12 +34,9 @@ Would render as:
 public let url: String
 ```
 
-**Infered Type**
-```swift
-String
-```
 
-URL where the image is located. Can be absolute or relative.
+
+> URL where the image is located. Can be absolute or relative.
 
 ### `altText`
 
@@ -51,12 +45,9 @@ URL where the image is located. Can be absolute or relative.
 public let altText: String
 ```
 
-**Infered Type**
-```swift
-String
-```
 
-Alternate text to display on non-graphic browsers or to be used by screen readers.
+
+> Alternate text to display on non-graphic browsers or to be used by screen readers.
 
 ### `markdown`
 
@@ -65,14 +56,12 @@ Alternate text to display on non-graphic browsers or to be used by screen reader
 public var markdown: String
 ```
 
-**Infered Type**
-```swift
-String
-```
 
-Generated Markdown output
+
+> Generated Markdown output
 
 --------------------
+
 
 ## Methods
 ### `init(url:altText:)`
@@ -82,19 +71,18 @@ Generated Markdown output
 public init(url: String, altText: String = "")
 ```
 
-**Infered Type**
-```swift
-(MarkdownImage.Type) -> (String, String) -> MarkdownImage
-```
 
-MarkdownImage initializer
 
-- Parameters:
-  - url: URL where the image is located. Can be absolute or relative.
-  - altText: Alternate text to display on non-graphic browsers or to be used by screen readers.
+> MarkdownImage initializer
+
+> - Parameters:
+>   - url: URL where the image is located. Can be absolute or relative.
+>   - altText: Alternate text to display on non-graphic browsers or to be used by screen readers.
 
 #### Parameters
 | Name | Description |
 | ---- | ----------- |
-| `url` | URL where the image is located. Can be absolute or relative. |
-| `altText` | Alternate text to display on non-graphic browsers or to be used by screen readers. |
+| url | URL where the image is located. Can be absolute or relative. |
+| altText | Alternate text to display on non-graphic browsers or to be used by screen readers. |
+
+--------------------

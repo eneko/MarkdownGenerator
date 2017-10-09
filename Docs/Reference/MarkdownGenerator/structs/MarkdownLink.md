@@ -14,18 +14,15 @@
 public struct MarkdownLink: MarkdownConvertible
 ```
 
-**Infered Type**
-```swift
-MarkdownLink.Type
-```
 
-Render an HTML link in Markdown format
 
-    MarkdownLink(text: "Google", url: "https://example.com").markdown
+> Render an HTML link in Markdown format
 
-Would render as:
+>     MarkdownLink(text: "Google", url: "https://example.com").markdown
 
-    [Google](https://example.com)
+> Would render as:
+
+>     [Google](https://example.com)
 
 --------------------
 
@@ -37,12 +34,9 @@ Would render as:
 public let text: String
 ```
 
-**Infered Type**
-```swift
-String
-```
 
-Text to display as hyper-linked.
+
+> Text to display as hyper-linked.
 
 ### `url`
 
@@ -51,12 +45,9 @@ Text to display as hyper-linked.
 public let url: String
 ```
 
-**Infered Type**
-```swift
-String
-```
 
-Link URL, can be absolute, relative, or #local.
+
+> Link URL, can be absolute, relative, or #local.
 
 ### `markdown`
 
@@ -65,14 +56,12 @@ Link URL, can be absolute, relative, or #local.
 public var markdown: String
 ```
 
-**Infered Type**
-```swift
-String
-```
 
-Generated Markdown output
+
+> Generated Markdown output
 
 --------------------
+
 
 ## Methods
 ### `init(text:url:)`
@@ -82,19 +71,18 @@ Generated Markdown output
 public init(text: String, url: String)
 ```
 
-**Infered Type**
-```swift
-(MarkdownLink.Type) -> (String, String) -> MarkdownLink
-```
 
-MarkdownLink initializer
 
-- Parameters:
-  - text: Text to display as hyper-linked.
-  - url: Link URL, can be absolute, relative, or #local.
+> MarkdownLink initializer
+
+> - Parameters:
+>   - text: Text to display as hyper-linked.
+>   - url: Link URL, can be absolute, relative, or #local.
 
 #### Parameters
 | Name | Description |
 | ---- | ----------- |
-| `text` | Text to display as hyper-linked. |
-| `url` | Link URL, can be absolute, relative, or #local. |
+| text | Text to display as hyper-linked. |
+| url | Link URL, can be absolute, relative, or #local. |
+
+--------------------
