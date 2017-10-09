@@ -10,6 +10,7 @@ Run `sourcedocs` in the repository root to update this documentation.
 - [MarkdownImage](/Docs/Reference/MarkdownGenerator/structs/MarkdownImage.md)
 - [MarkdownLink](/Docs/Reference/MarkdownGenerator/structs/MarkdownLink.md)
 - [MarkdownList](/Docs/Reference/MarkdownGenerator/structs/MarkdownList.md)
+- [MarkdownTable](/Docs/Reference/MarkdownGenerator/structs/MarkdownTable.md)
 
 
 

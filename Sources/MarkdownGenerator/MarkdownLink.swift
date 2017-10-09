@@ -9,11 +9,11 @@ import Foundation
 
 /// Render an HTML link in Markdown format
 ///
-///     MarkdownLink(text: "Google", url: "https://www.google.com").markdown
+///     MarkdownLink(text: "Google", url: "https://example.com").markdown
 ///
 /// Would render as:
 ///
-///     [Google](https://www.google.com)
+///     [Google](https://example.com)
 ///
 public struct MarkdownLink: MarkdownConvertible {
 

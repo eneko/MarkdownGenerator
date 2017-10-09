@@ -21,11 +21,11 @@ MarkdownImage.Type
 
 Render an HTML image in Markdown format
 
-    MarkdownImage(url: "http://www.enekoalonso.com/media/sourcedocs-header.jpg", altText: "SourceDocs Header").markdown
+    MarkdownImage(url: "http://example.com/image.jpg", altText: "SourceDocs Header").markdown
 
 Would render as:
 
-    ![SourceDocs Header](http://www.enekoalonso.com/media/sourcedocs-header.jpg)
+    ![SourceDocs Header](http://example.com/image.jpg)
 
 --------------------
 
