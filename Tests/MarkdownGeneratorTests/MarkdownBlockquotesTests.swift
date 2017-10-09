@@ -25,14 +25,14 @@ class MarkdownBlockquotesTests: XCTestCase {
 
     let output = """
         > ## This is a header.
-        >
+
         > 1.   This is the first list item.
         > 2.   This is the second list item.
-        >
+
         > Here's some example code:
-        >
+
         >     return shell_exec("echo $input | $markdown_script");
-        >
+
         > > This is a quote.
         """
 
@@ -49,7 +49,13 @@ class MarkdownBlockquotesTests: XCTestCase {
     }
 
     func testMultipleInputs() {
-        XCTAssertEqual([input, input].blockquoted.markdown, [output, output].joined(separator: "\n>\n"))
+        XCTAssertEqual([input, input].blockquoted.markdown, [output, output].joined(separator: "\n\n"))
+    }
+
+    func testWhitespaces() {
+        XCTAssertEqual("".blockquoted.markdown, "")
+        XCTAssertEqual("\n".blockquoted.markdown, "\n")
+        XCTAssertEqual("\t".blockquoted.markdown, "> \t")
     }
 
 }
