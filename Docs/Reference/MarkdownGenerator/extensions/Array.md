@@ -1,0 +1,22 @@
+**EXTENSION**
+# `Array`
+
+--------------------
+
+## Properties
+### `markdown`
+
+**Declaration**
+```swift
+public var markdown: String
+```
+
+**Infered Type**
+```swift
+String
+```
+
+Render a collection of Markdown convertible elements.
+
+Elements are rendered separated by one empty line, to prevent formatting interference.
+
