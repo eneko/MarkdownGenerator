@@ -25,8 +25,6 @@ public struct MarkdownBlockquotes: MarkdownConvertible
 > > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
 > > id sem consectetuer libero luctus adipiscing.
 
---------------------
-
 ## Properties
 ### `markdown`
 
@@ -38,9 +36,6 @@ public var markdown: String
 
 
 > Generated Markdown output
-
---------------------
-
 
 ## Methods
 ### `init(content:)`
@@ -60,5 +55,3 @@ public init(content: MarkdownConvertible)
 | Name | Description |
 | ---- | ----------- |
 | content | Content to be block-quoted with ’> ’ |
-
---------------------

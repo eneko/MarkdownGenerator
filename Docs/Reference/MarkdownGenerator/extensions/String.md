@@ -1,8 +1,6 @@
 **EXTENSION**
 # `String`
 
---------------------
-
 ## Properties
 ### `markdown`
 
@@ -14,7 +12,4 @@ public var markdown: String
 
 
 > Render a string of text as Markdown. No transformations applied.
-
---------------------
-
 

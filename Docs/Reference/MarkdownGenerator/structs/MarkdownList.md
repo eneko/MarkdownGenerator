@@ -33,8 +33,6 @@ public struct MarkdownList: MarkdownConvertible
 >         1. Nested item (second-level)
 >     1. Back to first-level
 
---------------------
-
 ## Properties
 ### `items`
 
@@ -58,9 +56,6 @@ public var markdown: String
 
 > Generated Markdown output
 
---------------------
-
-
 ## Methods
 ### `init(items:style:)`
 
@@ -79,5 +74,3 @@ public init(items: [MarkdownConvertible], style: MarkdownListStyle = .unordered)
 | Name | Description |
 | ---- | ----------- |
 | items | List of items to be converted to a list. |
-
---------------------

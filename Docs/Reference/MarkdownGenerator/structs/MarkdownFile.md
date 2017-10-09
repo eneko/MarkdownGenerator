@@ -20,8 +20,6 @@ public struct MarkdownFile
 
 > Helper structure to write Markdown files to disk.
 
---------------------
-
 ## Properties
 ### `filename`
 
@@ -73,9 +71,6 @@ public var filePath: String
 
 > Computed property containing the file path (`<basePath>/<filename>.md`)
 
---------------------
-
-
 ## Methods
 ### `init(filename:basePath:content:)`
 
@@ -124,6 +119,3 @@ public func write() throws
 > - Throws: Throws an exception if the file could not be written to disk, or
 >           if the path could not be created.
 
-
-
---------------------

@@ -24,8 +24,6 @@ public struct MarkdownLink: MarkdownConvertible
 >
 >     [Google](https://example.com)
 
---------------------
-
 ## Properties
 ### `text`
 
@@ -60,9 +58,6 @@ public var markdown: String
 
 > Generated Markdown output
 
---------------------
-
-
 ## Methods
 ### `init(text:url:)`
 
@@ -84,5 +79,3 @@ public init(text: String, url: String)
 | ---- | ----------- |
 | text | Text to display as hyper-linked. |
 | url | Link URL, can be absolute, relative, or #local. |
-
---------------------

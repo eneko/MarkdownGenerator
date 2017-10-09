@@ -24,8 +24,6 @@ public struct MarkdownImage: MarkdownConvertible
 >
 >     ![SourceDocs Header](http://example.com/image.jpg)
 
---------------------
-
 ## Properties
 ### `url`
 
@@ -60,9 +58,6 @@ public var markdown: String
 
 > Generated Markdown output
 
---------------------
-
-
 ## Methods
 ### `init(url:altText:)`
 
@@ -84,5 +79,3 @@ public init(url: String, altText: String = "")
 | ---- | ----------- |
 | url | URL where the image is located. Can be absolute or relative. |
 | altText | Alternate text to display on non-graphic browsers or to be used by screen readers. |
-
---------------------
