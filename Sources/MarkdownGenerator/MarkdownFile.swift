@@ -58,7 +58,8 @@ public struct MarkdownFile {
     ///           if the path could not be created.
     public func write() throws {
         try createDirectory(path: basePath)
-        try content.markdown.write(toFile: filePath, atomically: true, encoding: .utf8)
+        let output = content.markdown.removingConsecutiveBlankLines
+        try output.write(toFile: filePath, atomically: true, encoding: .utf8)
     }
 
     private func createDirectory(path: String) throws {
