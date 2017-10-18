@@ -19,4 +19,9 @@ class MarkdownImageTests: XCTestCase {
         XCTAssertEqual(image.markdown, "![Alternate Text](http://example.com/image.png)")
     }
 
+    static var allTests = [
+        ("testImage", testImage),
+        ("testImageAltText", testImageAltText),
+    ]
+
 }

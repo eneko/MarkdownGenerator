@@ -15,4 +15,8 @@ class MarkdownFileTests: XCTestCase {
         XCTAssertEqual(file.filePath, "Path/To/File/Test.md")
     }
 
+    static var allTests = [
+        ("testFilePath", testFilePath),
+    ]
+
 }

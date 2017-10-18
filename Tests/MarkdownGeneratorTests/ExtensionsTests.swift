@@ -33,5 +33,10 @@ class ExtensionsTests: XCTestCase {
         """
         XCTAssertEqual(strings.markdown, output)
     }
-    
+
+    static var allTests = [
+        ("testStringExtension", testStringExtension),
+        ("testArrayExtension", testArrayExtension),
+    ]
+
 }

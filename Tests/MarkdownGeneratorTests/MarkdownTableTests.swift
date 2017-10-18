@@ -61,4 +61,10 @@ class MarkdownTableTests: XCTestCase {
         XCTAssertEqual(table.markdown, output)
     }
 
+    static var allTests = [
+        ("test1x1Table", test1x1Table),
+        ("test3x3Table", test3x3Table),
+        ("testMultilineValues", testMultilineValues),
+    ]
+
 }

@@ -24,4 +24,8 @@ class MarkdownConvertibleTests: XCTestCase {
         XCTAssertEqual(Contact(firstName: "Bob", lastName: "Jones").markdown, "**Jones**, Bob")
     }
 
+    static var allTests = [
+        ("testCustomStructureAdoptsProtocol", testCustomStructureAdoptsProtocol),
+    ]
+
 }

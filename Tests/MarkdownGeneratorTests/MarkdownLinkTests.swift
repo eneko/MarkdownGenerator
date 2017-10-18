@@ -14,4 +14,8 @@ class MarkdownLinkTests: XCTestCase {
         XCTAssertEqual(MarkdownLink(text: "example.com", url: "http://example.com").markdown, "[example.com](http://example.com)")
     }
 
+    static var allTests = [
+        ("testLink", testLink),
+    ]
+
 }

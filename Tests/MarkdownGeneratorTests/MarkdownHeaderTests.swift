@@ -74,4 +74,13 @@ class MarkdownHeaderTests: XCTestCase {
         XCTAssertEqual(MarkdownHeader(title: "`Header Title`").markdown, "# `Header Title`")
     }
 
+    static var allTests = [
+        ("testDefaultHeader", testDefaultHeader),
+        ("testHeaderLevelsAtx", testHeaderLevelsAtx),
+        ("testHeaderLevelsSetex", testHeaderLevelsSetex),
+        ("testHeaderLevelsAtxCosing", testHeaderLevelsAtxCosing),
+        ("testHeaderLevelsSetexClosing", testHeaderLevelsSetexClosing),
+        ("testCodeHeader", testCodeHeader),
+    ]
+
 }

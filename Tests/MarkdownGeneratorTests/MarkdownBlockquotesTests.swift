@@ -65,4 +65,13 @@ class MarkdownBlockquotesTests: XCTestCase {
         XCTAssertEqual("\t".blockquoted.markdown, ">")
     }
 
+    static var allTests = [
+        ("testBlockquotes", testBlockquotes),
+        ("testBlockquoted", testBlockquoted),
+        ("testNested", testNested),
+        ("testMultipleInputs", testMultipleInputs),
+        ("testSingleLine", testSingleLine),
+        ("testWhitespaces", testWhitespaces),
+    ]
+
 }

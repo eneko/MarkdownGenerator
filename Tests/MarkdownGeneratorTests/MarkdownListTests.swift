@@ -108,7 +108,7 @@ class MarkdownListTests: XCTestCase {
         XCTAssertEqual(MarkdownList(items: input, style: .ordered).markdown, output)
     }
 
-    func testUnorderedTrheeLevelList() {
+    func testUnorderedThreeLevelList() {
         let list = MarkdownList(items: ["Fruits", MarkdownList(items: ["Citrics", MarkdownList(items: ["🍋", "🍊"])])])
 
         let output = """
@@ -177,5 +177,15 @@ class MarkdownListTests: XCTestCase {
 
         XCTAssertEqual(MarkdownList(items: input).markdown, output)
     }
+
+    static var allTests = [
+        ("testUnorderedSimpleList", testUnorderedSimpleList),
+        ("testOrderedSimpleList", testOrderedSimpleList),
+        ("testUnorderedNestedList", testUnorderedNestedList),
+        ("testOrderedNestedList", testOrderedNestedList),
+        ("testMixedNestedList", testMixedNestedList),
+        ("testUnorderedThreeLevelList", testUnorderedThreeLevelList),
+        ("testMultipleParagraphLists", testMultipleParagraphLists),
+    ]
 
 }
