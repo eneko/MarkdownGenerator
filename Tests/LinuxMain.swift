@@ -1,5 +1,5 @@
 import XCTest
-import MarkdownGeneratorTests
+@testable import MarkdownGeneratorTests
 
 XCTMain([
     testCase(ExtensionsTests.allTests),
