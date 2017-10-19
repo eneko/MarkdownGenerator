@@ -19,7 +19,7 @@ extension String: MarkdownConvertible {
     /// Remove consecutive blank lines from a string output
     public var removingConsecutiveBlankLines: String {
         let lines = components(separatedBy: .newlines).map { $0.trimmingCharacters(in: .whitespaces) }
-        let filtered = lines.enumerated().filter { line in
+        let filtered: [(offset: Int, element: String)] = lines.enumerated().filter { line in
             return line.offset == 0 || lines[line.offset].isEmpty == false || lines[line.offset - 1].isEmpty == false
         }
         return filtered.map { $0.element }.joined(separator: String.newLine)

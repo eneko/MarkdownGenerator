@@ -21,7 +21,7 @@ public struct MarkdownCodeBlock: MarkdownConvertible {
         switch style {
         case .indented:
             let lines = code.components(separatedBy: .newlines)
-            let indented = lines.map { $0.isEmpty ? "" : "    \($0)" }
+            let indented: [String] = lines.map { $0.isEmpty ? "" : "    \($0)" }
             return indented.joined(separator: String.newLine)
         case .backticks(let language):
             return """

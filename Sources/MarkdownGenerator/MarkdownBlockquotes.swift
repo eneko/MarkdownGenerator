@@ -47,7 +47,7 @@ extension MarkdownConvertible {
             return ""
         }
         let lines = markdown.components(separatedBy: String.newLine)
-        let quoted = lines.map { "> \($0)".trimmingCharacters(in: .whitespaces) }
+        let quoted: [String] = lines.map { "> \($0)".trimmingCharacters(in: .whitespaces) }
         return quoted.joined(separator: String.newLine)
     }
 }
