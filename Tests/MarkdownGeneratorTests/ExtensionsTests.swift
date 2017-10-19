@@ -36,7 +36,7 @@ class ExtensionsTests: XCTestCase {
 
     static var allTests = [
         ("testStringExtension", testStringExtension),
-        ("testArrayExtension", testArrayExtension),
+        ("testArrayExtension", testArrayExtension)
     ]
 
 }

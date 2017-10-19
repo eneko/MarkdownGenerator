@@ -21,7 +21,7 @@ class MarkdownImageTests: XCTestCase {
 
     static var allTests = [
         ("testImage", testImage),
-        ("testImageAltText", testImageAltText),
+        ("testImageAltText", testImageAltText)
     ]
 
 }

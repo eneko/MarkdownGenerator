@@ -71,7 +71,7 @@ class MarkdownBlockquotesTests: XCTestCase {
         ("testNested", testNested),
         ("testMultipleInputs", testMultipleInputs),
         ("testSingleLine", testSingleLine),
-        ("testWhitespaces", testWhitespaces),
+        ("testWhitespaces", testWhitespaces)
     ]
 
 }

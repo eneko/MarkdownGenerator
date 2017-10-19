@@ -42,27 +42,30 @@ public struct MarkdownHeader: MarkdownConvertible {
     let level: MarkdownHeaderLevel
     let style: MarkdownHeaderStyle
     let close: Bool
-    
+
     /// MarkdownHeader initializer.
     ///
     /// - Parameters:
     ///   - title: Title of the header element
     ///   - level: Header level (`h1`, `h2`... `h6`)
-    ///   - style: Header style: `setex` (underlined) or `atx` ('#') (defaults to `atx`). Setex format is only available
-    ///            for first-level (using equal signs) and second-level headers (using dashes).
-    ///   - close: Close `atx` style headers (defaults to `false`). When false, headers only include the '#' prefix.
-    ///            When `true`, headers also include the trailing '#' suffix:
+    ///   - style: Header style: `setex` (underlined) or `atx` ('#') (defaults to `atx`).
+    ///            Setex format is only available for first-level (using equal signs) and
+    ///            second-level headers (using dashes).
+    ///   - close: Close `atx` style headers (defaults to `false`). When false, headers
+    ///            only include the '#' prefix. When `true`, headers also include the
+    ///            trailing '#' suffix:
     ///
     ///            ### Third-level Header ###
     ///
     /// - SeeAlso: MarkdownHeaderLevel, MarkdownHeaderStyle
-    public init(title: String, level: MarkdownHeaderLevel = .h1, style: MarkdownHeaderStyle = .atx, close: Bool = false) {
+    public init(title: String, level: MarkdownHeaderLevel = .h1, style: MarkdownHeaderStyle = .atx,
+                close: Bool = false) {
         self.title = title
         self.level = level
         self.style = level.rawValue < 3 ? style : .atx
         self.close = close
     }
-    
+
     /// Generated Markdown output
     public var markdown: String {
         switch style {

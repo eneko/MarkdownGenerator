@@ -27,7 +27,7 @@ class MarkdownTableTests: XCTestCase {
         let data: [[String]] = [
             ["🍏", "Apple", "Fruits"],
             ["🍊", "Orange", "Fruits"],
-            ["🥖", "Bread", "Bakery"],
+            ["🥖", "Bread", "Bakery"]
         ]
         let table = MarkdownTable(headers: ["", "Name", "Department"], data: data)
 
@@ -46,7 +46,7 @@ class MarkdownTableTests: XCTestCase {
         let data: [[String]] = [
             ["Single-line value", "Multi-line\n\nvalue"],
             ["Single-line value", "Multi-line\n\nvalue"],
-            ["Single-line value", "Multi-line\n\nvalue"],
+            ["Single-line value", "Multi-line\n\nvalue"]
         ]
         let table = MarkdownTable(headers: ["Single-line", "Multi-line"], data: data)
 
@@ -64,7 +64,7 @@ class MarkdownTableTests: XCTestCase {
     static var allTests = [
         ("test1x1Table", test1x1Table),
         ("test3x3Table", test3x3Table),
-        ("testMultilineValues", testMultilineValues),
+        ("testMultilineValues", testMultilineValues)
     ]
 
 }

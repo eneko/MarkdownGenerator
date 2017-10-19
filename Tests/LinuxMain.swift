@@ -10,6 +10,5 @@ XCTMain([
     testCase(MarkdownImageTests.allTests),
     testCase(MarkdownLinkTests.allTests),
     testCase(MarkdownListTests.allTests),
-    testCase(MarkdownTableTests.allTests),
+    testCase(MarkdownTableTests.allTests)
 ])
-

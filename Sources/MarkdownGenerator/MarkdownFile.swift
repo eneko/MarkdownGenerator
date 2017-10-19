@@ -12,7 +12,7 @@ public struct MarkdownFile {
 
     /// Name of the Markdown file, without extension.
     public let filename: String
-    
+
     /// Path where the Markdown file will be written to.
     ///
     /// Path can be absolute or relative to the working directory. It should
@@ -20,7 +20,7 @@ public struct MarkdownFile {
     ///
     /// Path will be created if it doesn't already exist in the system.
     public let basePath: String
-    
+
     /// MarkdownConvertible entity that will be rendered
     /// as the Markdown content of the file. Can be an `Array`.
     public var content: MarkdownConvertible
@@ -48,7 +48,7 @@ public struct MarkdownFile {
     public var filePath: String {
         return "\(basePath)/\(filename).md"
     }
-    
+
     /// Generate and write the Markdown file to disk.
     ///
     /// - Will override the file if already existing, or create a new one.

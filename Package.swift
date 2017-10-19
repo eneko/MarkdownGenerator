@@ -4,11 +4,11 @@ import PackageDescription
 let package = Package(
     name: "MarkdownGenerator",
     products: [
-        .library(name: "MarkdownGenerator", targets: ["MarkdownGenerator"]),
+        .library(name: "MarkdownGenerator", targets: ["MarkdownGenerator"])
     ],
     dependencies: [],
     targets: [
         .target(name: "MarkdownGenerator", dependencies: []),
-        .testTarget(name: "MarkdownGeneratorTests", dependencies: ["MarkdownGenerator"]),
+        .testTarget(name: "MarkdownGeneratorTests", dependencies: ["MarkdownGenerator"])
     ]
 )

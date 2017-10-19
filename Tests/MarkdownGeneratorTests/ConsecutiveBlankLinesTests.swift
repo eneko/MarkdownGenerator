@@ -116,7 +116,7 @@ class ConsecutiveBlankLinesTests: XCTestCase {
         ("testLeadingAndTrailing", testLeadingAndTrailing),
         ("testLeadingAndTrailingConsecutive", testLeadingAndTrailingConsecutive),
         ("testInBetweenText", testInBetweenText),
-        ("testTripleBlankLines", testTripleBlankLines),
+        ("testTripleBlankLines", testTripleBlankLines)
     ]
 
 }

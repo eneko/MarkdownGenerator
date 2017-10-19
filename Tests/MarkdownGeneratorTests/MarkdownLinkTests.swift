@@ -11,11 +11,12 @@ import MarkdownGenerator
 class MarkdownLinkTests: XCTestCase {
 
     func testLink() {
-        XCTAssertEqual(MarkdownLink(text: "example.com", url: "http://example.com").markdown, "[example.com](http://example.com)")
+        let link = MarkdownLink(text: "example.com", url: "http://example.com")
+        XCTAssertEqual(link.markdown, "[example.com](http://example.com)")
     }
 
     static var allTests = [
-        ("testLink", testLink),
+        ("testLink", testLink)
     ]
 
 }

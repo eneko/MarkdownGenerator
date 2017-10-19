@@ -16,7 +16,7 @@ class MarkdownFileTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testFilePath", testFilePath),
+        ("testFilePath", testFilePath)
     ]
 
 }
