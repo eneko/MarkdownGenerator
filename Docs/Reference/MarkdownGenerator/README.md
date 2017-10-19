@@ -9,6 +9,8 @@ Run `sourcedocs` in the repository root to update this documentation.
 ## Structs
 
 -   [MarkdownBlockquotes](/Docs/Reference/MarkdownGenerator/structs/MarkdownBlockquotes.md)
+-   [MarkdownCodeBlock](/Docs/Reference/MarkdownGenerator/structs/MarkdownCodeBlock.md)
+-   [MarkdownCollapsibleSection](/Docs/Reference/MarkdownGenerator/structs/MarkdownCollapsibleSection.md)
 -   [MarkdownFile](/Docs/Reference/MarkdownGenerator/structs/MarkdownFile.md)
 -   [MarkdownHeader](/Docs/Reference/MarkdownGenerator/structs/MarkdownHeader.md)
 -   [MarkdownImage](/Docs/Reference/MarkdownGenerator/structs/MarkdownImage.md)
@@ -20,6 +22,7 @@ Run `sourcedocs` in the repository root to update this documentation.
 
 ## Enums
 
+-   [CodeBlockStyle](/Docs/Reference/MarkdownGenerator/enums/CodeBlockStyle.md)
 -   [MarkdownListStyle](/Docs/Reference/MarkdownGenerator/enums/MarkdownListStyle.md)
 
 ## Extensions
