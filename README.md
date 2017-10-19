@@ -13,7 +13,7 @@ A small Swift library to generate Markdown documents.
 - [x] Easily generate Markdown from structured data
 - [x] Extendible: make your classes and structs `MarkdownConvertible`
 - [x] Swift Package Manager compatible
-- [x] Linux compatible
+- [x] Linux compatible 🐧
 
 
 ## MarkdownConvertible
