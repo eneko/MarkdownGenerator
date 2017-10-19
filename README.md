@@ -22,15 +22,15 @@ markdown string, by implementing the `.markdown` computed property.
 
 Out of the box, `MarkdownGenerator` provides the following Markdown elements:
 
-- Unordered lists
-- Ordered lists
-- Tables
-- Block-quotes
-- Code Blocks
-- Collapsible Blocks
-- Images
-- Links
-- Headings
+- ✅ Unordered lists
+- ✅ Ordered lists
+- ✅ Tables
+- ✅ Block-quotes
+- ✅ Code Blocks
+- ✅ Collapsible Blocks
+- ✅ Images
+- ✅ Links
+- ✅ Headings
 
 Please take a look at the following examples, or read the [reference documentation](/Docs/Reference/MarkdownGenerator).
 
