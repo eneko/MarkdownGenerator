@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:trusty
+      - image: ubuntu:14.04
     steps:
       - checkout
       - run:
