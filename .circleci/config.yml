@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ubuntu:trusty
+    steps:
+      - checkout
+      - run:
+          name: Install swiftenv
+          command: eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
+      - run:
+          name: Run tests
+          command: swift test --parallel
