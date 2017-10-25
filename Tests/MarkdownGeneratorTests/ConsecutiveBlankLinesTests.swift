@@ -107,6 +107,35 @@ class ConsecutiveBlankLinesTests: XCTestCase {
         XCTAssertEqual(input.removingConsecutiveBlankLines, output)
     }
 
+    func testLists() {
+        let input = """
+        - something
+
+        - something else
+
+            - nested
+            - nested too
+
+        - back again
+
+
+        - final item
+        """
+        let output = """
+        - something
+
+        - something else
+
+            - nested
+            - nested too
+
+        - back again
+
+        - final item
+        """
+        XCTAssertEqual(input.removingConsecutiveBlankLines, output)
+    }
+
     static var allTests = [
         ("testEmpty", testEmpty),
         ("testSingle", testSingle),
@@ -116,7 +145,8 @@ class ConsecutiveBlankLinesTests: XCTestCase {
         ("testLeadingAndTrailing", testLeadingAndTrailing),
         ("testLeadingAndTrailingConsecutive", testLeadingAndTrailingConsecutive),
         ("testInBetweenText", testInBetweenText),
-        ("testTripleBlankLines", testTripleBlankLines)
+        ("testTripleBlankLines", testTripleBlankLines),
+        ("testLists", testLists)
     ]
 
 }
