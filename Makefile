@@ -1,8 +1,7 @@
 .PHONY: docs
 
 docs:
-	rm -rf Docs/Reference/MarkdownGenerator
-	sourcedocs --spm-module MarkdownGenerator
+	sourcedocs generate --clean --spm-module MarkdownGenerator --output-folder docs
 
 test:
 	swift test --parallel
