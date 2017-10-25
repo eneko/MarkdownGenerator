@@ -4,6 +4,12 @@
 - None
 
 
+## 0.2.1
+
+### Fixes
+- Fix issue where indentation was removed when removing duplicate blank lines.
+
+
 ## 0.2.0
 
 ### Enhancements
