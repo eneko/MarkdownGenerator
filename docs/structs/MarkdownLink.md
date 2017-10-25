@@ -1,7 +1,9 @@
 **STRUCT**
+
 # `MarkdownLink`
 
 **Contents**
+
 - [Properties](#properties)
   - `text`
   - `url`
@@ -60,6 +62,7 @@ public init(text: String, url: String)
 >   - url: Link URL, can be absolute, relative, or #local.
 
 #### Parameters
+
 | Name | Description |
 | ---- | ----------- |
 | text | Text to display as hyper-linked. |

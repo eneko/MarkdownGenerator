@@ -1,7 +1,9 @@
 **ENUM**
+
 # `MarkdownListStyle`
 
 **Contents**
+
 - [Cases](#cases)
   - `ordered`
   - `unordered`

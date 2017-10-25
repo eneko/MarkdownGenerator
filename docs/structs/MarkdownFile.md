@@ -1,7 +1,9 @@
 **STRUCT**
+
 # `MarkdownFile`
 
 **Contents**
+
 - [Properties](#properties)
   - `filename`
   - `basePath`
@@ -78,6 +80,7 @@ public init(filename: String, basePath: String = "", content: MarkdownConvertibl
 >        as the Markdown content of the file. Can be an `Array`.
 
 #### Parameters
+
 | Name | Description |
 | ---- | ----------- |
 | filename | Name of the Markdown file, without extension. |

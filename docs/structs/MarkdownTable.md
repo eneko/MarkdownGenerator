@@ -1,7 +1,9 @@
 **STRUCT**
+
 # `MarkdownTable`
 
 **Contents**
+
 - [Properties](#properties)
   - `markdown`
 - [Methods](#methods)
@@ -51,6 +53,7 @@ public init(headers: [String], data: [[String]])
 >        number of columns as the headers array, to avoid formatting issues.
 
 #### Parameters
+
 | Name | Description |
 | ---- | ----------- |
 | headers | List of table header titles. |

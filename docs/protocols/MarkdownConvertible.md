@@ -1,4 +1,5 @@
 **PROTOCOL**
+
 # `MarkdownConvertible`
 
 ```swift

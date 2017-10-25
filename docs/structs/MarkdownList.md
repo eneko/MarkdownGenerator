@@ -1,7 +1,9 @@
 **STRUCT**
+
 # `MarkdownList`
 
 **Contents**
+
 - [Properties](#properties)
   - `items`
   - `markdown`
@@ -59,6 +61,7 @@ public init(items: [MarkdownConvertible], style: MarkdownListStyle = .unordered)
 > - Parameter items: List of items to be converted to a list.
 
 #### Parameters
+
 | Name | Description |
 | ---- | ----------- |
 | items | List of items to be converted to a list. |

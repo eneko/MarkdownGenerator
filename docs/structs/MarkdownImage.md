@@ -1,7 +1,9 @@
 **STRUCT**
+
 # `MarkdownImage`
 
 **Contents**
+
 - [Properties](#properties)
   - `url`
   - `altText`
@@ -60,6 +62,7 @@ public init(url: String, altText: String = "")
 >   - altText: Alternate text to display on non-graphic browsers or to be used by screen readers.
 
 #### Parameters
+
 | Name | Description |
 | ---- | ----------- |
 | url | URL where the image is located. Can be absolute or relative. |

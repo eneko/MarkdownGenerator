@@ -1,7 +1,9 @@
 **STRUCT**
+
 # `MarkdownCollapsibleSection`
 
 **Contents**
+
 - [Properties](#properties)
   - `markdown`
 - [Methods](#methods)

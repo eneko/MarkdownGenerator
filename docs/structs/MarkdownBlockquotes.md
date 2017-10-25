@@ -1,7 +1,9 @@
 **STRUCT**
+
 # `MarkdownBlockquotes`
 
 **Contents**
+
 - [Properties](#properties)
   - `markdown`
 - [Methods](#methods)
@@ -43,6 +45,7 @@ public init(content: MarkdownConvertible)
 > - Parameter content: Content to be block-quoted with '> '
 
 #### Parameters
+
 | Name | Description |
 | ---- | ----------- |
 | content | Content to be block-quoted with ’> ’ |

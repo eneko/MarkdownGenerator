@@ -1,7 +1,9 @@
 **ENUM**
+
 # `CodeBlockStyle`
 
 **Contents**
+
 - [Cases](#cases)
   - `indented`
   - `backticks`
