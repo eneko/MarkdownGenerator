@@ -75,6 +75,7 @@ public init(title: String, level: MarkdownHeaderLevel = .h1, style: MarkdownHead
 > - SeeAlso: MarkdownHeaderLevel, MarkdownHeaderStyle
 
 #### Parameters
+
 | Name | Description |
 | ---- | ----------- |
 | title | Title of the header element |
