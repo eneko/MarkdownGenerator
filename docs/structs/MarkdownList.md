@@ -1,7 +1,13 @@
 **STRUCT**
 # `MarkdownList`
 
-**Declaration**
+**Contents**
+- [Properties](#properties)
+  - `items`
+  - `markdown`
+- [Methods](#methods)
+  - `init(items:style:)`
+
 ```swift
 public struct MarkdownList: MarkdownConvertible
 ```
@@ -25,30 +31,25 @@ public struct MarkdownList: MarkdownConvertible
 >     1. Back to first-level
 
 ## Properties
-<details><summary><code>items</code></summary>
+### `items`
 
-**Declaration**
 ```swift
 public var items: [MarkdownConvertible]
 ```
 
 > List of items to be converted to a list.
-</details>
 
-<details><summary><code>markdown</code></summary>
+### `markdown`
 
-**Declaration**
 ```swift
 public var markdown: String
 ```
 
 > Generated Markdown output
-</details>
 
 ## Methods
-<details><summary><code>init(items:style:)</code></summary>
+### `init(items:style:)`
 
-**Declaration**
 ```swift
 public init(items: [MarkdownConvertible], style: MarkdownListStyle = .unordered)
 ```
@@ -61,4 +62,3 @@ public init(items: [MarkdownConvertible], style: MarkdownListStyle = .unordered)
 | Name | Description |
 | ---- | ----------- |
 | items | List of items to be converted to a list. |
-</details>

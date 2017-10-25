@@ -1,7 +1,11 @@
 **ENUM**
 # `MarkdownListStyle`
 
-**Declaration**
+**Contents**
+- [Cases](#cases)
+  - `ordered`
+  - `unordered`
+
 ```swift
 public enum MarkdownListStyle
 ```
@@ -12,20 +16,14 @@ public enum MarkdownListStyle
 > - unordered: Unordered lists use hyphens as list markers.
 
 ## Cases
-<details><summary><code>ordered</code></summary>
+### `ordered`
 
-**Declaration**
 ```swift
 case ordered
 ```
 
-</details>
+### `unordered`
 
-<details><summary><code>unordered</code></summary>
-
-**Declaration**
 ```swift
 case unordered
 ```
-
-</details>
