@@ -58,9 +58,9 @@ public var markdown: String
 
 ## Methods
 
-<details><summary>`init(title:level:style:close:)`</summary>
+<details><summary><code>init(title:level:style:close:)</code></summary>
 
-
+<p>
 ```swift
 public init(title: String, level: MarkdownHeaderLevel = .h1, style: MarkdownHeaderStyle = .atx,
                 close: Bool = false)
@@ -91,4 +91,5 @@ public init(title: String, level: MarkdownHeaderLevel = .h1, style: MarkdownHead
 | style | Header style: `setex` (underlined) or `atx` (’#’) (defaults to `atx`). Setex format is only available for first-level (using equal signs) and second-level headers (using dashes). |
 | close | Close `atx` style headers (defaults to `false`). When false, headers only include the ‘#’ prefix. When `true`, headers also include the trailing ‘#’ suffix: |
 
+</p>
 </details>
