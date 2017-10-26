@@ -45,15 +45,16 @@ public struct MarkdownHeader: MarkdownConvertible
 
 ## Properties
 
-<details><summary>`markdown`</summary>
-
-
+<details><summary>markdown</summary>
+<div>
+  
 ```swift
 public var markdown: String
 ```
 
 > Generated Markdown output
 
+</div>
 </details>
 
 ## Methods
