@@ -45,7 +45,7 @@ public struct MarkdownHeader: MarkdownConvertible
 
 ## Properties
 
-<details><summary markdown="span"><code>markdown</code></summary>
+<details><summary markdown="span"><code>markdown span</code></summary>
 
 ```swift
 public var markdown: String
@@ -57,7 +57,8 @@ public var markdown: String
 
 ## Methods
 
-<details><summary markdown="span"><code>init(title:level:style:close:)</code></summary>
+<details><summary markdown="span"><code>init(title:level:style:close:)</code>
+</summary>
 
 ```swift
 public init(title: String, level: MarkdownHeaderLevel = .h1, style: MarkdownHeaderStyle = .atx,
