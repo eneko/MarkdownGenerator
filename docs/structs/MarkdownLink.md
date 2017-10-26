@@ -24,32 +24,35 @@ public struct MarkdownLink: MarkdownConvertible
 >     [Google](https://example.com)
 
 ## Properties
-### `text`
+<details><summary><code>text</code></summary>
 
 ```swift
 public let text: String
 ```
 
 > Text to display as hyper-linked.
+</details>
 
-### `url`
+<details><summary><code>url</code></summary>
 
 ```swift
 public let url: String
 ```
 
 > Link URL, can be absolute, relative, or #local.
+</details>
 
-### `markdown`
+<details><summary><code>markdown</code></summary>
 
 ```swift
 public var markdown: String
 ```
 
 > Generated Markdown output
+</details>
 
 ## Methods
-### `init(text:url:)`
+<details><summary><code>init(text:url:)</code></summary>
 
 ```swift
 public init(text: String, url: String)
@@ -67,3 +70,4 @@ public init(text: String, url: String)
 | ---- | ----------- |
 | text | Text to display as hyper-linked. |
 | url | Link URL, can be absolute, relative, or #local. |
+</details>

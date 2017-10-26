@@ -14,17 +14,20 @@ public struct MarkdownCollapsibleSection: MarkdownConvertible
 ```
 
 ## Properties
-### `markdown`
+<details><summary><code>markdown</code></summary>
 
 ```swift
 public var markdown: String
 ```
 
 > Generated Markdown output
+</details>
 
 ## Methods
-### `init(summary:details:)`
+<details><summary><code>init(summary:details:)</code></summary>
 
 ```swift
 public init(summary: String, details: MarkdownConvertible)
 ```
+
+</details>

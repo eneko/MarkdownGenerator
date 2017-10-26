@@ -14,17 +14,20 @@ public struct MarkdownCodeBlock: MarkdownConvertible
 ```
 
 ## Properties
-### `markdown`
+<details><summary><code>markdown</code></summary>
 
 ```swift
 public var markdown: String
 ```
 
 > Generated Markdown output
+</details>
 
 ## Methods
-### `init(code:style:)`
+<details><summary><code>init(code:style:)</code></summary>
 
 ```swift
 public init(code: String, style: CodeBlockStyle = .indented)
 ```
+
+</details>
