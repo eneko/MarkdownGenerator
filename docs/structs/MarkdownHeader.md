@@ -45,8 +45,7 @@ public struct MarkdownHeader: MarkdownConvertible
 
 ## Properties
 
-<details>
-<summary><code>markdown</code>
+<details><summary><code>markdown</code>
 </summary>
 
 ```swift
@@ -59,8 +58,7 @@ public var markdown: String
 
 ## Methods
 
-<details>
-<summary><code>init(title:level:style:close:)</code>
+<details><summary><code>init(title:level:style:close:)</code>
 </summary>
 
 ```swift
