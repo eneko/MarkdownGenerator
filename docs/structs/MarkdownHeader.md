@@ -44,17 +44,22 @@ public struct MarkdownHeader: MarkdownConvertible
 >     ### This is an H3 ###
 
 ## Properties
-<details><summary><code>markdown</code></summary>
+
+<details><summary>`markdown`</summary>
+
 
 ```swift
 public var markdown: String
 ```
 
 > Generated Markdown output
+
 </details>
 
 ## Methods
-<details><summary><code>init(title:level:style:close:)</code></summary>
+
+<details><summary>`init(title:level:style:close:)`</summary>
+
 
 ```swift
 public init(title: String, level: MarkdownHeaderLevel = .h1, style: MarkdownHeaderStyle = .atx,
@@ -85,4 +90,5 @@ public init(title: String, level: MarkdownHeaderLevel = .h1, style: MarkdownHead
 | level | Header level (`h1`, `h2`… `h6`) |
 | style | Header style: `setex` (underlined) or `atx` (’#’) (defaults to `atx`). Setex format is only available for first-level (using equal signs) and second-level headers (using dashes). |
 | close | Close `atx` style headers (defaults to `false`). When false, headers only include the ‘#’ prefix. When `true`, headers also include the trailing ‘#’ suffix: |
+
 </details>
