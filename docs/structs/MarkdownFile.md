@@ -20,16 +20,17 @@ public struct MarkdownFile
 > Helper structure to write Markdown files to disk.
 
 ## Properties
-<details><summary><code>filename</code></summary>
+<details><summary markdown="span"><code>filename</code></summary>
 
 ```swift
 public let filename: String
 ```
 
 > Name of the Markdown file, without extension.
+
 </details>
 
-<details><summary><code>basePath</code></summary>
+<details><summary markdown="span"><code>basePath</code></summary>
 
 ```swift
 public let basePath: String
@@ -41,9 +42,10 @@ public let basePath: String
 > not contain a trailing slash, nor the name of the file to write.
 >
 > Path will be created if it doesn't already exist in the system.
+
 </details>
 
-<details><summary><code>content</code></summary>
+<details><summary markdown="span"><code>content</code></summary>
 
 ```swift
 public var content: MarkdownConvertible
@@ -51,19 +53,21 @@ public var content: MarkdownConvertible
 
 > MarkdownConvertible entity that will be rendered
 > as the Markdown content of the file. Can be an `Array`.
+
 </details>
 
-<details><summary><code>filePath</code></summary>
+<details><summary markdown="span"><code>filePath</code></summary>
 
 ```swift
 public var filePath: String
 ```
 
 > Computed property containing the file path (`<basePath>/<filename>.md`)
+
 </details>
 
 ## Methods
-<details><summary><code>init(filename:basePath:content:)</code></summary>
+<details><summary markdown="span"><code>init(filename:basePath:content:)</code></summary>
 
 ```swift
 public init(filename: String, basePath: String = "", content: MarkdownConvertible)
@@ -90,9 +94,10 @@ public init(filename: String, basePath: String = "", content: MarkdownConvertibl
 | filename | Name of the Markdown file, without extension. |
 | basePath | Path where the Markdown file will be written to. Path can be absolute or relative to the working directory. It should not contain a trailing slash, nor the name of the file to write. Path will be created if it doesn’t already exist in the system. |
 | content | MarkdownConvertible entity that will be rendered as the Markdown content of the file. Can be an `Array`. |
+
 </details>
 
-<details><summary><code>write()</code></summary>
+<details><summary markdown="span"><code>write()</code></summary>
 
 ```swift
 public func write() throws
