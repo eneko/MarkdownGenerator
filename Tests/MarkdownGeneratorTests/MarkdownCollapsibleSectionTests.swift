@@ -12,9 +12,10 @@ class MarkdownCollapsibleSectionTests: XCTestCase {
 
     func testSimple() {
         let output = """
-        <details><summary>Hello</summary>
+        <details><summary markdown="span">Hello</summary>
 
         World
+
         </details>
         """
         XCTAssertEqual(MarkdownCollapsibleSection(summary: "Hello", details: "World").markdown, output)
@@ -22,7 +23,7 @@ class MarkdownCollapsibleSectionTests: XCTestCase {
 
     func testComplex() {
         let output = """
-        <details><summary>This is cool stuff</summary>
+        <details><summary markdown="span">This is cool stuff</summary>
 
         # Title
 
@@ -38,6 +39,7 @@ class MarkdownCollapsibleSectionTests: XCTestCase {
         ```swift
         let foo = Bar()
         ```
+
         </details>
         """
 

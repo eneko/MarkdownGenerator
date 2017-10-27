@@ -1,7 +1,16 @@
 ## Master
 
-### Changes
+### Enhancements
 - None
+
+### Fixes
+- None
+
+
+## 0.3.0
+
+### Enhancements
+- Add support for collapsible blocks on GitHub.com and rendered GitHub Pages.
 
 
 ## 0.2.1
@@ -31,3 +40,4 @@
 
 ## 0.1.0
 - Initial Release
+
