@@ -2,7 +2,7 @@
 
 
 ![Release](https://img.shields.io/github/release/eneko/markdowngenerator.svg)
-![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![Swift 4.1](https://img.shields.io/badge/Swift-4.1-orange.svg)
 [![Build Status](https://travis-ci.org/eneko/MarkdownGenerator.svg?branch=master)](https://travis-ci.org/eneko/MarkdownGenerator)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/spm-compatible-brightgreen.svg)](https://swift.org/package-manager)
 ![Linux Compatible](https://img.shields.io/badge/linux-compatible%20🐧-brightgreen.svg)
