@@ -1,14 +1,21 @@
-os:
-  - linux
-  - osx
-
 language: generic
-sudo: required
-dist: trusty
-osx_image: xcode9.3
+
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      sudo: required
+    - os: osx
+      osx_image: xcode9.3
 
 install:
-  - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      # eval "$(curl -sL https://swiftenv.fuller.li/install.sh)";
+      # swiftenv install 4.0;
+      sudo apt-get update;
+      sudo apt-get install swift;
+    fi
+  - swift --version
 
 script:
   - swift test --parallel
