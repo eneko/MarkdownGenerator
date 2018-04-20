@@ -3,15 +3,15 @@ language: generic
 matrix:
   include:
     - os: linux
-      dist: xenial
+      dist: trusty
       sudo: required
     - os: osx
       osx_image: xcode9.3
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      sudo apt-get update;
-      sudo apt-get install swift;
+      eval "$(curl -sL https://swiftenv.fuller.li/install.sh)";
+      swiftenv install 4.1;
     fi
   - swift --version
 
