@@ -35,6 +35,6 @@ extension Array: MarkdownConvertible {
     ///
     /// Elements are rendered separated by one blank line, to prevent formatting interference.
     public var markdown: String {
-        return self.flatMap { ($0 as? MarkdownConvertible)?.markdown }.joined(separator: "\n\n")
+        return compactMap { ($0 as? MarkdownConvertible)?.markdown }.joined(separator: "\n\n")
     }
 }
