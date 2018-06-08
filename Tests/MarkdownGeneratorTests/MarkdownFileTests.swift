@@ -24,6 +24,15 @@ class MarkdownFileTests: XCTestCase {
         XCTAssertEqual(fileContent, content.markdown)
     }
 
+    func testFileWriteWithFolder() throws {
+        let content = MarkdownHeader(title: "Hello World!")
+        let file = MarkdownFile(filename: "WriteTest", basePath: "AFolder", content: content)
+        try file.write()
+
+        let fileContent = try String(contentsOfFile: "AFolder/WriteTest.md")
+        XCTAssertEqual(fileContent, content.markdown)
+    }
+
     static var allTests = [
         ("testFilePath", testFilePath)
     ]
