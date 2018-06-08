@@ -39,14 +39,14 @@ public struct MarkdownFile {
     ///   - content: MarkdownConvertible entity that will be rendered
     ///        as the Markdown content of the file. Can be an `Array`.
     public init(filename: String, basePath: String = "", content: MarkdownConvertible) {
-        self.filename = filename
-        self.basePath = basePath
+        self.filename = filename.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.basePath = basePath.trimmingCharacters(in: .whitespacesAndNewlines)
         self.content = content
     }
 
     /// Computed property containing the file path (`<basePath>/<filename>.md`)
     public var filePath: String {
-        return "\(basePath)/\(filename).md"
+        return basePath.isEmpty ? "\(filename).md" : "\(basePath)/\(filename).md"
     }
 
     /// Generate and write the Markdown file to disk.
@@ -63,6 +63,9 @@ public struct MarkdownFile {
     }
 
     private func createDirectory(path: String) throws {
+        guard path.isEmpty == false else {
+            return
+        }
         var isDir: ObjCBool = false
         if FileManager.default.fileExists(atPath: path, isDirectory: &isDir) == false {
             try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
