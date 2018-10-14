@@ -18,6 +18,13 @@ install:
 
 script:
   - swift test --parallel
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      swift package generate-xcodeproj --enable-code-coverage;
+      xcodebuild -scheme MarkdownGenerator-Package test;
+    fi
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      bash <(curl -s https://codecov.io/bash);
+    fi
+
