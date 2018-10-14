@@ -1,30 +1,55 @@
 language: generic
 
-matrix:
+jobs:
   include:
-    - os: linux
+    - stage: Continuous Integration
+      name: Linux Swift 4.1
+      os: linux
       dist: trusty
       sudo: required
-    - os: osx
+      install:
+      - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
+      - swiftenv install 4.1
+      - swiftenv local 4.1
+      - swift --version
+      script:
+      - swift test --parallel
+    - stage: Continuous Integration
+      name: Linux Swift 4.2
+      os: linux
+      dist: trusty
+      sudo: required
+      install:
+      - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
+      - swiftenv install 4.2
+      - swiftenv local 4.2
+      - swift --version
+      script:
+      - swift test --parallel
+    - stage: Continuous Integration
+      name: macOS Swift 4.1
+      os: osx
       osx_image: xcode9.3
-
-install:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      eval "$(curl -sL https://swiftenv.fuller.li/install.sh)";
-      swiftenv install 4.1;
-      swiftenv local 4.1;
-    fi
-  - swift --version
-
-script:
-  - swift test --parallel
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      swift package generate-xcodeproj --enable-code-coverage;
-      xcodebuild -scheme MarkdownGenerator-Package test;
-    fi
-
-after_success:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      bash <(curl -s https://codecov.io/bash);
-    fi
-
+      script:
+      - swift test --parallel
+    - stage: Continuous Integration
+      name: macOS Swift 4.1.2
+      os: osx
+      osx_image: xcode9.4
+      script:
+      - swift test --parallel
+    - stage: Continuous Integration
+      name: macOS Swift 4.2
+      os: osx
+      osx_image: xcode10
+      script:
+      - swift test --parallel
+    - stage: Continuous Integration
+      name: Code Coverage (Swift 4.1)
+      os: osx
+      osx_image: xcode9.3
+      script:
+      - swift package generate-xcodeproj --enable-code-coverage
+      - xcodebuild -scheme MarkdownGenerator-Package test
+      after_success:
+      - bash <(curl -s https://codecov.io/bash)
