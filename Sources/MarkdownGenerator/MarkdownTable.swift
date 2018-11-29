@@ -61,7 +61,7 @@ public struct MarkdownTable: MarkdownConvertible {
     /// - Returns: Array of column widths
     func computeColumnWidths() -> [Int] {
         let rows = [headers] + data
-        guard let maxColumns = rows.map({ $0.count }).max() else {
+        guard let maxColumns = rows.map({ $0.count }).max(), maxColumns > 0 else {
             return []
         }
         let columnWidths = (0..<maxColumns).map { columnIndex -> Int in

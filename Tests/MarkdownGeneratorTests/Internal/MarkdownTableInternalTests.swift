@@ -15,4 +15,8 @@ class MarkdownTableInternalTests: XCTestCase {
         XCTAssertEqual(table.columnLength(values: []), 0)
     }
 
+    func testEmptyColumnWidths() {
+        let table = MarkdownTable(headers: [], data: [])
+        XCTAssertEqual(table.computeColumnWidths(), [])
+    }
 }
