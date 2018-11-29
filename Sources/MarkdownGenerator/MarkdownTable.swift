@@ -9,11 +9,11 @@ import Foundation
 
 /// Render a two dimensional Markdown table.
 ///
-///     |   | Name | Department |
-///     | - | ---- | ---------- |
-///     | 🍏 | Apple | Fruits |
-///     | 🍊 | Orange | Fruits |
-///     | 🥖 | Bread | Bakery |
+///     |    | Name   | Department |
+///     | -- | ------ | ---------- |
+///     | 🍏 | Apple  | Fruits     |
+///     | 🍊 | Orange | Fruits     |
+///     | 🥖 | Bread  | Bakery     |
 ///
 /// *Notes*:
 /// - Markdown tables are not supported by all Markdown readers.
@@ -40,10 +40,14 @@ public struct MarkdownTable: MarkdownConvertible {
 
     /// Generated Markdown output
     public var markdown: String {
-        let headerRow = makeRow(values: headers)
-        let separatorRow = makeRow(values: headers.map { Array(repeating: "-", count: $0.count).joined() })
+        let columnWidths = computeColumnWidths()
+        if columnWidths.isEmpty {
+            return .newLine
+        }
+        let headerRow = makeRow(values: pad(values: headers, lengths: columnWidths))
+        let separatorRow = makeRow(values: columnWidths.map { String(repeating: "-", count: $0) })
         let dataRows = data.map { columns in
-            return makeRow(values: columns)
+            return makeRow(values: pad(values: columns, lengths: columnWidths))
         }
         return """
         \(headerRow)
@@ -52,10 +56,56 @@ public struct MarkdownTable: MarkdownConvertible {
         """
     }
 
-    // Convert a String array into a markdown formatter table row.
-    // Table cells cannot contain multiple lines. New line characters are replaced by a space.
-    private func makeRow(values: [String]) -> String {
+    /// Return max length for each column, counting individual UTF16 characters for better emoji support.
+    ///
+    /// - Returns: Array of column widths
+    func computeColumnWidths() -> [Int] {
+        let rows = [headers] + data
+        guard let maxColumns = rows.map({ $0.count }).max() else {
+            return []
+        }
+        let columnWidths = (0..<maxColumns).map { columnIndex -> Int in
+            return columnLength(values: rows.compactMap({ $0.get(at: columnIndex) }))
+        }
+        return columnWidths
+    }
+
+    func columnLength(values: [String]) -> Int {
+        return values.map({ $0.utf16.count }).max() ?? 0
+    }
+
+    /// Pad array of strings to a given length, counting individual UTF16 characters
+    ///
+    /// - Parameters:
+    ///   - values: array of strings to pad
+    ///   - lengths: desired lengths
+    /// - Returns: array of right-padded strings
+    func pad(values: [String], lengths: [Int]) -> [String] {
+        var values = values
+        while values.count < lengths.count {
+            values.append("")
+        }
+        return zip(values, lengths).map { value, length in
+            value + String(repeating: " ", count: max(0, length - value.utf16.count))
+        }
+    }
+
+    /// Convert a String array into a markdown formatter table row.
+    /// Table cells cannot contain multiple lines. New line characters are replaced by a space.
+    ///
+    /// - Parameter values: array of values
+    /// - Returns: Markdown formatted row
+    func makeRow(values: [String]) -> String {
         let values = values.map { $0.replacingOccurrences(of: String.newLine, with: " ") }
         return "| " + values.joined(separator: " | ") + " |"
+    }
+}
+
+extension Array {
+    func get(at index: Int) -> Element? {
+        guard (0..<count).contains(index) else {
+            return nil
+        }
+        return self[index]
     }
 }
