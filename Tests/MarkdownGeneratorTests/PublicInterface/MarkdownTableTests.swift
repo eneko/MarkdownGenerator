@@ -10,6 +10,11 @@ import MarkdownGenerator
 
 class MarkdownTableTests: XCTestCase {
 
+    func testEmptyTable() {
+        let table = MarkdownTable(headers: [], data: [])
+        XCTAssertEqual(table.markdown, "\n")
+    }
+
     func test1x1Table() {
         let data: [[String]] = [[]]
         let table = MarkdownTable(headers: ["Header"], data: data)
@@ -17,7 +22,7 @@ class MarkdownTableTests: XCTestCase {
         let output = """
         | Header |
         | ------ |
-        |  |
+        |        |
         """
 
         XCTAssertEqual(table.markdown, output)
@@ -32,11 +37,11 @@ class MarkdownTableTests: XCTestCase {
         let table = MarkdownTable(headers: ["", "Name", "Department"], data: data)
 
         let output = """
-        |   | Name | Department |
-        | - | ---- | ---------- |
-        | 🍏 | Apple | Fruits |
-        | 🍊 | Orange | Fruits |
-        | 🥖 | Bread | Bakery |
+        |    | Name   | Department |
+        | -- | ------ | ---------- |
+        | 🍏 | Apple  | Fruits     |
+        | 🍊 | Orange | Fruits     |
+        | 🥖 | Bread  | Bakery     |
         """
 
         XCTAssertEqual(table.markdown, output)
@@ -51,11 +56,25 @@ class MarkdownTableTests: XCTestCase {
         let table = MarkdownTable(headers: ["Single-line", "Multi-line"], data: data)
 
         let output = """
-        | Single-line | Multi-line |
-        | ----------- | ---------- |
+        | Single-line       | Multi-line        |
+        | ----------------- | ----------------- |
         | Single-line value | Multi-line  value |
         | Single-line value | Multi-line  value |
         | Single-line value | Multi-line  value |
+        """
+
+        XCTAssertEqual(table.markdown, output)
+    }
+
+    func testMixedTable() {
+        let table = MarkdownTable(headers: ["Foo"], data: [["Bar"], [], ["Baz", "Bax"]])
+
+        let output = """
+        | Foo |     |
+        | --- | --- |
+        | Bar |     |
+        |     |     |
+        | Baz | Bax |
         """
 
         XCTAssertEqual(table.markdown, output)
