@@ -12,7 +12,7 @@ A small Swift library to generate Markdown documents.
 
 **Features**
 - ✅ Easily generate Markdown from structured data
-- ✅ Extendible: make your classes and structs `MarkdownConvertible`
+- ✅ Extendible: make your classes and structs conform to `MarkdownConvertible`
 - ✅ Swift Package Manager compatible
 - ✅ Linux compatible 🐧
 
@@ -202,4 +202,4 @@ on it. Pull requests are warmly welcome as well.
 
 
 ## License
-MarkdownGenerator is licensed under the MIT license. See [LICENSE](/LICENSE) for more info.
+MarkdownGenerator is licensed under the Apache 2.0 license. See [LICENSE](/LICENSE) for more info.

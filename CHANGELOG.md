@@ -1,10 +1,49 @@
 ## Master
 
+### Breaking changes
+- None
+
 ### Enhancements
 - None
 
-### Fixes
+### Other updates
 - None
+
+
+## 1.0.0
+
+### Breaking changes
+- None
+
+### Enhancements
+- Pretty Markdown tables
+
+### Other updates
+- Update license to Apache 2.0
+
+
+## 0.5.0
+
+### Breaking changes
+- None
+
+### Enhancements
+- None
+
+### Other updates
+- Fix file writing when base path is empty.
+
+
+## 0.4.0
+
+### Breaking Changes
+- None
+
+### Enhancements
+- None
+
+### Other updates
+- Add support for Swift 4.1
 
 
 ## 0.3.0
@@ -39,5 +78,6 @@
 
 
 ## 0.1.0
+
 - Initial Release
 
