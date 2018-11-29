@@ -73,20 +73,21 @@ print(table.markdown)
 
 Generates the following output:
 
-    |   | Name | Department |
-    | - | ---- | ---------- |
-    | 🍏 | Apple | Fruits |
-    | 🍊 | Orange | Fruits |
-    | 🥖 | Bread | Bakery |
+    |    | Name   | Department |
+    | -- | ------ | ---------- |
+    | 🍏 | Apple  | Fruits     |
+    | 🍊 | Orange | Fruits     |
+    | 🥖 | Bread  | Bakery     |
 
 Which renders as:
 
-|   | Name | Department |
-| - | ---- | ---------- |
-| 🍏 | Apple | Fruits |
-| 🍊 | Orange | Fruits |
-| 🥖 | Bread | Bakery |
+|    | Name   | Department |
+| -- | ------ | ---------- |
+| 🍏 | Apple  | Fruits     |
+| 🍊 | Orange | Fruits     |
+| 🥖 | Bread  | Bakery     |
 
+Pretty tables 🎉
 
 ### Blockquotes
 
@@ -162,8 +163,8 @@ Generates the following output:
 
     | Name | Count |
     | ---- | ----- |
-    | Dog | 1 |
-    | Cat | 2 |
+    | Dog  | 1     |
+    | Cat  | 2     |
 
     ```swift
     let foo = Bar()
@@ -182,8 +183,8 @@ Which renders as (click to expand):
 
 | Name | Count |
 | ---- | ----- |
-| Dog | 1 |
-| Cat | 2 |
+| Dog  | 1     |
+| Cat  | 2     |
 
 ```swift
 let foo = Bar()
