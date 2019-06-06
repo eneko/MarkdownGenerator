@@ -2,15 +2,6 @@
 
 # `MarkdownImage`
 
-**Contents**
-
-- [Properties](#properties)
-  - `url`
-  - `altText`
-  - `markdown`
-- [Methods](#methods)
-  - `init(url:altText:)`
-
 ```swift
 public struct MarkdownImage: MarkdownConvertible
 ```
@@ -24,7 +15,7 @@ public struct MarkdownImage: MarkdownConvertible
 >     ![SourceDocs Header](http://example.com/image.jpg)
 
 ## Properties
-<details><summary markdown="span"><code>url</code></summary>
+### `url`
 
 ```swift
 public let url: String
@@ -32,9 +23,7 @@ public let url: String
 
 > URL where the image is located. Can be absolute or relative.
 
-</details>
-
-<details><summary markdown="span"><code>altText</code></summary>
+### `altText`
 
 ```swift
 public let altText: String
@@ -42,9 +31,7 @@ public let altText: String
 
 > Alternate text to display on non-graphic browsers or to be used by screen readers.
 
-</details>
-
-<details><summary markdown="span"><code>markdown</code></summary>
+### `markdown`
 
 ```swift
 public var markdown: String
@@ -52,10 +39,8 @@ public var markdown: String
 
 > Generated Markdown output
 
-</details>
-
 ## Methods
-<details><summary markdown="span"><code>init(url:altText:)</code></summary>
+### `init(url:altText:)`
 
 ```swift
 public init(url: String, altText: String = "")
@@ -73,5 +58,3 @@ public init(url: String, altText: String = "")
 | ---- | ----------- |
 | url | URL where the image is located. Can be absolute or relative. |
 | altText | Alternate text to display on non-graphic browsers or to be used by screen readers. |
-
-</details>

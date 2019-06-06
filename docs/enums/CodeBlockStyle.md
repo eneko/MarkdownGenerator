@@ -2,12 +2,6 @@
 
 # `CodeBlockStyle`
 
-**Contents**
-
-- [Cases](#cases)
-  - `indented`
-  - `backticks`
-
 ```swift
 public enum CodeBlockStyle
 ```
@@ -24,7 +18,7 @@ public enum CodeBlockStyle
 case indented
 ```
 
-### `backticks`
+### `backticks(language:)`
 
 ```swift
 case backticks(language: String)

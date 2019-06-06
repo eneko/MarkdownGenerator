@@ -2,13 +2,6 @@
 
 # `MarkdownCollapsibleSection`
 
-**Contents**
-
-- [Properties](#properties)
-  - `markdown`
-- [Methods](#methods)
-  - `init(summary:details:)`
-
 ```swift
 public struct MarkdownCollapsibleSection: MarkdownConvertible
 ```
@@ -29,7 +22,7 @@ public struct MarkdownCollapsibleSection: MarkdownConvertible
 > ```
 
 ## Properties
-<details><summary markdown="span"><code>markdown</code></summary>
+### `markdown`
 
 ```swift
 public var markdown: String
@@ -37,10 +30,8 @@ public var markdown: String
 
 > Generated Markdown output
 
-</details>
-
 ## Methods
-<details><summary markdown="span"><code>init(summary:details:)</code></summary>
+### `init(summary:details:)`
 
 ```swift
 public init(summary: String, details: MarkdownConvertible)
@@ -58,5 +49,3 @@ public init(summary: String, details: MarkdownConvertible)
 | ---- | ----------- |
 | summary | Plain text or HTML string containing the block title. |
 | details | Markdown convertible elements to include in the collapsible block. |
-
-</details>

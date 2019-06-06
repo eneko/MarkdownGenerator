@@ -2,17 +2,6 @@
 
 # `MarkdownFile`
 
-**Contents**
-
-- [Properties](#properties)
-  - `filename`
-  - `basePath`
-  - `content`
-  - `filePath`
-- [Methods](#methods)
-  - `init(filename:basePath:content:)`
-  - `write()`
-
 ```swift
 public struct MarkdownFile
 ```
@@ -20,7 +9,7 @@ public struct MarkdownFile
 > Helper structure to write Markdown files to disk.
 
 ## Properties
-<details><summary markdown="span"><code>filename</code></summary>
+### `filename`
 
 ```swift
 public let filename: String
@@ -28,9 +17,7 @@ public let filename: String
 
 > Name of the Markdown file, without extension.
 
-</details>
-
-<details><summary markdown="span"><code>basePath</code></summary>
+### `basePath`
 
 ```swift
 public let basePath: String
@@ -43,9 +30,7 @@ public let basePath: String
 >
 > Path will be created if it doesn't already exist in the system.
 
-</details>
-
-<details><summary markdown="span"><code>content</code></summary>
+### `content`
 
 ```swift
 public var content: MarkdownConvertible
@@ -54,9 +39,7 @@ public var content: MarkdownConvertible
 > MarkdownConvertible entity that will be rendered
 > as the Markdown content of the file. Can be an `Array`.
 
-</details>
-
-<details><summary markdown="span"><code>filePath</code></summary>
+### `filePath`
 
 ```swift
 public var filePath: String
@@ -64,10 +47,8 @@ public var filePath: String
 
 > Computed property containing the file path (`<basePath>/<filename>.md`)
 
-</details>
-
 ## Methods
-<details><summary markdown="span"><code>init(filename:basePath:content:)</code></summary>
+### `init(filename:basePath:content:)`
 
 ```swift
 public init(filename: String, basePath: String = "", content: MarkdownConvertible)
@@ -95,9 +76,7 @@ public init(filename: String, basePath: String = "", content: MarkdownConvertibl
 | basePath | Path where the Markdown file will be written to. Path can be absolute or relative to the working directory. It should not contain a trailing slash, nor the name of the file to write. Path will be created if it doesn’t already exist in the system. |
 | content | MarkdownConvertible entity that will be rendered as the Markdown content of the file. Can be an `Array`. |
 
-</details>
-
-<details><summary markdown="span"><code>write()</code></summary>
+### `write()`
 
 ```swift
 public func write() throws
@@ -110,5 +89,3 @@ public func write() throws
 >
 > - Throws: Throws an exception if the file could not be written to disk, or
 >           if the path could not be created.
-
-</details>

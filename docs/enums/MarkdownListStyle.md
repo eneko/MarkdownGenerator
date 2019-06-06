@@ -2,12 +2,6 @@
 
 # `MarkdownListStyle`
 
-**Contents**
-
-- [Cases](#cases)
-  - `ordered`
-  - `unordered`
-
 ```swift
 public enum MarkdownListStyle
 ```

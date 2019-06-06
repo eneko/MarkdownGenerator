@@ -2,13 +2,6 @@
 
 # `MarkdownBlockquotes`
 
-**Contents**
-
-- [Properties](#properties)
-  - `markdown`
-- [Methods](#methods)
-  - `init(content:)`
-
 ```swift
 public struct MarkdownBlockquotes: MarkdownConvertible
 ```
@@ -25,7 +18,7 @@ public struct MarkdownBlockquotes: MarkdownConvertible
 > > id sem consectetuer libero luctus adipiscing.
 
 ## Properties
-<details><summary markdown="span"><code>markdown</code></summary>
+### `markdown`
 
 ```swift
 public var markdown: String
@@ -33,10 +26,8 @@ public var markdown: String
 
 > Generated Markdown output
 
-</details>
-
 ## Methods
-<details><summary markdown="span"><code>init(content:)</code></summary>
+### `init(content:)`
 
 ```swift
 public init(content: MarkdownConvertible)
@@ -51,5 +42,3 @@ public init(content: MarkdownConvertible)
 | Name | Description |
 | ---- | ----------- |
 | content | Content to be block-quoted with ’> ’ |
-
-</details>
