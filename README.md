@@ -33,7 +33,7 @@ Out of the box, `MarkdownGenerator` provides the following Markdown elements:
 - Links
 - Headings
 
-Please take a look at the following examples, or read the [reference documentation](/Docs/Reference/MarkdownGenerator).
+Please take a look at the following examples, or read the [reference documentation](/docs).
 
 ### Lists
 List can be nested to any levels and contain single or multi-line items. Lists can be ordered, unordered, or mixed.
