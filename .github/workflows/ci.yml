@@ -25,4 +25,4 @@ jobs:
         swiftenv local ${{ matrix.swift_version }}
         swift --version
     - name: Test
-        swift test --parallel
+      run: swift test --parallel
