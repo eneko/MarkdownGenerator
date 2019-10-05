@@ -18,11 +18,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Install
+    - name: Install & Test
       run: |
         eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
         swiftenv install ${{ matrix.swift_version }}
         swiftenv local ${{ matrix.swift_version }}
         swift --version
-    - name: Test
-      run: swift test --parallel
+        swift test --parallel
