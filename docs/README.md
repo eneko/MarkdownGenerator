@@ -1,7 +1,3 @@
-# Reference Documentation
-This Reference Documentation has been generated with
-[SourceDocs](https://github.com/eneko/SourceDocs).
-
 ## Protocols
 
 -   [MarkdownConvertible](protocols/MarkdownConvertible.md)
@@ -28,3 +24,7 @@ This Reference Documentation has been generated with
 -   [Array](extensions/Array.md)
 -   [MarkdownConvertible](extensions/MarkdownConvertible.md)
 -   [String](extensions/String.md)
+
+# Reference Documentation
+This reference documentation was generated with
+[SourceDocs](https://github.com/eneko/SourceDocs).

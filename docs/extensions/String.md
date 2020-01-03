@@ -1,6 +1,9 @@
 **EXTENSION**
 
 # `String`
+```swift
+extension String: MarkdownConvertible
+```
 
 ## Properties
 ### `markdown`

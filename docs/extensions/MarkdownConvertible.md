@@ -1,6 +1,9 @@
 **EXTENSION**
 
 # `MarkdownConvertible`
+```swift
+extension MarkdownConvertible
+```
 
 ## Properties
 ### `blockquoted`
