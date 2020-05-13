@@ -2,10 +2,6 @@
 
 # `MarkdownBlockquotes`
 
-```swift
-public struct MarkdownBlockquotes: MarkdownConvertible
-```
-
 > Render Markdown Blockquotes
 >
 > Markdown uses email-style > characters for blockquoting.
@@ -20,25 +16,11 @@ public struct MarkdownBlockquotes: MarkdownConvertible
 ## Properties
 ### `markdown`
 
-```swift
-public var markdown: String
-```
-
 > Generated Markdown output
 
 ## Methods
 ### `init(content:)`
 
-```swift
-public init(content: MarkdownConvertible)
-```
-
 > MarkdownBlockquotes initializer
 >
 > - Parameter content: Content to be block-quoted with '> '
-
-#### Parameters
-
-| Name | Description |
-| ---- | ----------- |
-| content | Content to be block-quoted with ’> ’ |

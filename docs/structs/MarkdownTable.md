@@ -2,10 +2,6 @@
 
 # `MarkdownTable`
 
-```swift
-public struct MarkdownTable: MarkdownConvertible
-```
-
 > Render a two dimensional Markdown table.
 >
 >     |    | Name   | Department |
@@ -22,18 +18,10 @@ public struct MarkdownTable: MarkdownConvertible
 ## Properties
 ### `markdown`
 
-```swift
-public var markdown: String
-```
-
 > Generated Markdown output
 
 ## Methods
 ### `init(headers:data:)`
-
-```swift
-public init(headers: [String], data: [[String]])
-```
 
 > MarkdownTable initializer
 >
@@ -44,10 +32,3 @@ public init(headers: [String], data: [[String]])
 >
 >        An array of rows, each row containing an array of columns. All rows should contain the same
 >        number of columns as the headers array, to avoid formatting issues.
-
-#### Parameters
-
-| Name | Description |
-| ---- | ----------- |
-| headers | List of table header titles. |
-| data | Two-dimensional `String` array with the table content. Rows are defined by the outer array, columns are defined by the inner arrays. An array of rows, each row containing an array of columns. All rows should contain the same number of columns as the headers array, to avoid formatting issues. |
