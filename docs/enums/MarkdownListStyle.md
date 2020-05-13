@@ -2,10 +2,6 @@
 
 # `MarkdownListStyle`
 
-```swift
-public enum MarkdownListStyle
-```
-
 > Specifies the type of list to be generated
 >
 > - ordered: Ordered lists use numbers followed by periods.
@@ -14,12 +10,4 @@ public enum MarkdownListStyle
 ## Cases
 ### `ordered`
 
-```swift
-case ordered
-```
-
 ### `unordered`
-
-```swift
-case unordered
-```

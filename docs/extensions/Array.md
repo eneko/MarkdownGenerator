@@ -1,16 +1,9 @@
 **EXTENSION**
 
 # `Array`
-```swift
-extension Array: MarkdownConvertible
-```
 
 ## Properties
 ### `markdown`
-
-```swift
-public var markdown: String
-```
 
 > Render a collection of Markdown convertible elements.
 >

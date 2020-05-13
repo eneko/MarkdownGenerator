@@ -2,10 +2,6 @@
 
 # `MarkdownCollapsibleSection`
 
-```swift
-public struct MarkdownCollapsibleSection: MarkdownConvertible
-```
-
 > Collapsible blocks are a great way to hide large portions of content
 > that, while valuable to the reader, would result on a lot of noise.
 >
@@ -24,28 +20,13 @@ public struct MarkdownCollapsibleSection: MarkdownConvertible
 ## Properties
 ### `markdown`
 
-```swift
-public var markdown: String
-```
-
 > Generated Markdown output
 
 ## Methods
 ### `init(summary:details:)`
-
-```swift
-public init(summary: String, details: MarkdownConvertible)
-```
 
 > MarkdownCollapsibleSection initializer
 >
 > - Parameters:
 >   - summary: Plain text or HTML string containing the block title.
 >   - details: Markdown convertible elements to include in the collapsible block.
-
-#### Parameters
-
-| Name | Description |
-| ---- | ----------- |
-| summary | Plain text or HTML string containing the block title. |
-| details | Markdown convertible elements to include in the collapsible block. |

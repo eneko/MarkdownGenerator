@@ -1,16 +1,9 @@
 **EXTENSION**
 
 # `MarkdownConvertible`
-```swift
-extension MarkdownConvertible
-```
 
 ## Properties
 ### `blockquoted`
-
-```swift
-public var blockquoted: MarkdownConvertible
-```
 
 > Quoted version of the generated Markdown output of the current entity.
 >
