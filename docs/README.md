@@ -1,6 +1,4 @@
 # Reference Documentation
-This Reference Documentation has been generated with
-[SourceDocs](https://github.com/eneko/SourceDocs).
 
 ## Protocols
 
@@ -21,6 +19,8 @@ This Reference Documentation has been generated with
 ## Enums
 
 -   [CodeBlockStyle](enums/CodeBlockStyle.md)
+-   [MarkdownHeaderLevel](enums/MarkdownHeaderLevel.md)
+-   [MarkdownHeaderStyle](enums/MarkdownHeaderStyle.md)
 -   [MarkdownListStyle](enums/MarkdownListStyle.md)
 
 ## Extensions
@@ -28,3 +28,8 @@ This Reference Documentation has been generated with
 -   [Array](extensions/Array.md)
 -   [MarkdownConvertible](extensions/MarkdownConvertible.md)
 -   [String](extensions/String.md)
+
+This reference documentation was generated with
+[SourceDocs](https://github.com/eneko/SourceDocs).
+
+Generated at 2020-05-13 20:32:10 +0000

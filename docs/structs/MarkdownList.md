@@ -2,10 +2,6 @@
 
 # `MarkdownList`
 
-```swift
-public struct MarkdownList: MarkdownConvertible
-```
-
 > Render a list of elements in Markdown format
 >
 > Unordered lists:
@@ -27,33 +23,15 @@ public struct MarkdownList: MarkdownConvertible
 ## Properties
 ### `items`
 
-```swift
-public var items: [MarkdownConvertible]
-```
-
 > List of items to be converted to a list.
 
 ### `markdown`
-
-```swift
-public var markdown: String
-```
 
 > Generated Markdown output
 
 ## Methods
 ### `init(items:style:)`
 
-```swift
-public init(items: [MarkdownConvertible], style: MarkdownListStyle = .unordered)
-```
-
 > MarkdownList initializer
 >
 > - Parameter items: List of items to be converted to a list.
-
-#### Parameters
-
-| Name | Description |
-| ---- | ----------- |
-| items | List of items to be converted to a list. |
