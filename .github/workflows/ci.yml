@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+    - master
+  schedule:
+  - cron: 0 2 * * 1-5
+
+jobs:
+  test:
+    name: Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, ubuntu-16.04, macOS-10.15, macos-11.0]
+    
+    steps:
+    - uses: actions/checkout@v1
+#     - name: Install SwiftEnv
+#       run: |
+#         eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
+#         swiftenv install ${{ matrix.swift_version }}
+#         swiftenv local ${{ matrix.swift_version }}
+#         swiftenv version
+    - name: Test
+      run: |
+        swift --version
+        swift test --parallel
