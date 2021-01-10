@@ -9,21 +9,20 @@ on:
 
 jobs:
   test:
-    name: Test Swift ${{ matrix.swift_version }} on ${{ matrix.os }}
+    name: Test on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        swift_version: [4.1, 5.2, 5.3]
-        os: [ubuntu-latest, ubuntu-16.04, macOS-latest]
+        os: [ubuntu-18.04, ubuntu-16.04, macOS-10.15, macos-11.0]
     
     steps:
     - uses: actions/checkout@v1
-    - name: Install SwiftEnv
-      run: |
-        eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
-        swiftenv install ${{ matrix.swift_version }}
-        swiftenv local ${{ matrix.swift_version }}
-        swiftenv version
+#     - name: Install SwiftEnv
+#       run: |
+#         eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
+#         swiftenv install ${{ matrix.swift_version }}
+#         swiftenv local ${{ matrix.swift_version }}
+#         swiftenv version
     - name: Test
       run: |
         swift --version
