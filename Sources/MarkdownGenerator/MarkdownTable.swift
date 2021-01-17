@@ -96,7 +96,11 @@ public struct MarkdownTable: MarkdownConvertible {
     /// - Parameter values: array of values
     /// - Returns: Markdown formatted row
     func makeRow(values: [String]) -> String {
-        let values = values.map { $0.replacingOccurrences(of: String.newLine, with: " ") }
+        let values = values.map { value in
+            value
+                .replacingOccurrences(of: String.newLine, with: " ")
+                .replacingOccurrences(of: "|", with: "\\|")
+        }
         return "| " + values.joined(separator: " | ") + " |"
     }
 }
