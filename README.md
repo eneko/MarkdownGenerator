@@ -3,7 +3,8 @@
 
 ![Release](https://img.shields.io/github/release/eneko/markdowngenerator.svg)
 ![Swift 4.0+](https://img.shields.io/badge/Swift-4.0+-orange.svg)
-[![Build Status](https://travis-ci.org/eneko/MarkdownGenerator.svg?branch=master)](https://travis-ci.org/eneko/MarkdownGenerator)
+[![Build Status](https://travis-ci.com/eneko/MarkdownGenerator.svg?branch=main)](https://travis-ci.com/eneko/MarkdownGenerator)
+![CI](https://github.com/eneko/MarkdownGenerator/workflows/CI/badge.svg)
 [![codecov](https://codecov.io/gh/eneko/MarkdownGenerator/branch/master/graph/badge.svg)](https://codecov.io/gh/eneko/MarkdownGenerator)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/spm-compatible-brightgreen.svg)](https://swift.org/package-manager)
 ![Linux Compatible](https://img.shields.io/badge/linux-compatible%20🐧-brightgreen.svg)
@@ -13,7 +14,7 @@ A small Swift library to generate Markdown documents.
 **Features**
 - ✅ Easily generate Markdown from structured data
 - ✅ Extendible: make your classes and structs conform to `MarkdownConvertible`
-- ✅ Swift Package Manager compatible
+- ✅ Swift Package Manager compatible (Swift 4.0+)
 - ✅ Linux compatible 🐧
 
 

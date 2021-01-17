@@ -80,10 +80,24 @@ class MarkdownTableTests: XCTestCase {
         XCTAssertEqual(table.markdown, output)
     }
 
+    func testPipeEscaping() {
+        let table = MarkdownTable(headers: ["Foo"], data: [["Foo|Bar|Baz"]])
+
+        let output = """
+        | Foo         |
+        | ----------- |
+        | Foo\\|Bar\\|Baz |
+        """
+
+        XCTAssertEqual(table.markdown, output)
+    }
+
     static var allTests = [
         ("test1x1Table", test1x1Table),
         ("test3x3Table", test3x3Table),
-        ("testMultilineValues", testMultilineValues)
+        ("testMultilineValues", testMultilineValues),
+        ("testMixedTable", testMixedTable),
+        ("testPipeEscaping", testPipeEscaping)
     ]
 
 }
